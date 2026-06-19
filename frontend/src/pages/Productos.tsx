@@ -293,7 +293,7 @@ export const Productos: React.FC = () => {
                 <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-sm">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-bold text-primary">Calibre 11</span>
-                    <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-light rounded font-bold uppercase">Estándar Comercial</span>
+                    <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-hover rounded font-bold uppercase">Estándar Comercial</span>
                   </div>
                   <p className="text-xs sm:text-sm font-body text-slate-600 leading-relaxed">La opción más equilibrada. Excelente resistencia estructural para terrenos, canchas y residencias.</p>
                 </div>
@@ -326,7 +326,7 @@ export const Productos: React.FC = () => {
                 <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 shadow-sm">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-bold text-primary">2.25 Pulgadas</span>
-                    <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-light rounded font-bold uppercase">Más Utilizado</span>
+                    <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-hover rounded font-bold uppercase">Más Utilizado</span>
                   </div>
                   <p className="text-xs sm:text-sm font-body text-slate-600 leading-relaxed">Proporciona excelente visibilidad y resistencia al escalamiento. El estándar para el 80% de los proyectos.</p>
                 </div>

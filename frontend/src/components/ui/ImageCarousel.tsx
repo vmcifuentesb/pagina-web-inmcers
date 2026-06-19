@@ -61,7 +61,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 400
       {/* Botones de Navegación */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-primary/80 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-primary/80 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
         aria-label="Anterior imagen"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -69,7 +69,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 400
 
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-primary/80 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-primary/80 backdrop-blur-md flex items-center justify-center text-white border border-white/20 transition-all opacity-0 group-hover:opacity-100 hover:scale-110 z-10"
         aria-label="Siguiente imagen"
       >
         <ChevronRight className="w-6 h-6" />

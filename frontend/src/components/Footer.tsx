@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="border-t border-secondary-light mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+        <div className="border-t border-secondary-light mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
           <p>© {currentYear} Inmcers S.A. Todos los derechos reservados. Orgullosamente guatemaltecos, 30 años fabricando calidad.</p>
           <p className="mt-4 md:mt-0">
             Desarrollada por{' '}

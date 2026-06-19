@@ -1,0 +1,14 @@
+{
+  "name": "Inmcers S.A — Industria de mallas y cercas",
+  "short_name": "Inmcers",
+  "description": "Industria de mallas y cercas en Guatemala. Fabricación e instalación de malla ciclón, razor ribbon y cerramientos perimetrales.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "icons": [
+    { "src": "/images/logo/logo-oficial.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/images/logo/logo-oficial.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/logo/logo-oficial.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

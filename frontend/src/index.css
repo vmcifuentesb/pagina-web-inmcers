@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006633;          /* Verde institucional profundo */
+  --color-primary-hover: #1F6E41;    /* Verde medio/intermedio */
+  --color-primary-light: #42ED8C;    /* Verde claro */
+  --color-secondary: #05111F;        /* Deep blue base background (Projects blue) */
+  --color-secondary-hover: #0b1a2d;  /* Darker blue for cards */
+  --color-secondary-light: #152b47;  /* Steel blue for borders */
+  --color-accent: #6E3C1F;           /* Marrón tierra (Acento cálido/cobre del manual) */
+  --color-accent-hover: #542d17;     /* Marrón tierra oscuro */
+  --color-bgLight: #f4f6f8;          /* Light base background */
+  
+  --font-title: 'DM Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --shadow-premium: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(5, 17, 31, 0.4);
+}
+
+/* Estilos de Capa Base */
+html {
+  scroll-behavior: smooth;
+  background-color: #f4f6f8;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f4f6f8;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 600;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 8px;
+  border: 2px solid var(--color-secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Mouse Pointer for Clickable Elements */
+button,
+a,
+[role="button"],
+select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+.cursor-pointer,
+.clickable {
+  cursor: pointer !important;
+}
+
+/* Premium Glassmorphism and Utility styles */
+.glass-nav {
+  background: rgba(12, 19, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(44, 56, 59, 0.4);
+}
+
+.glass-card {
+  background: rgba(26, 37, 40, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(44, 56, 59, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-dark {
+  background: rgba(12, 19, 20, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(44, 56, 59, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #a86236 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Interactive Cyclone Mesh Background Pattern in Earth Brown and Green */
+.bg-mesh-pattern {
+  background-color: var(--color-secondary);
+  background-image: radial-gradient(rgba(110, 60, 31, 0.1) 1px, transparent 0),
+                    radial-gradient(rgba(0, 102, 51, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Custom premium border gradients */
+.border-gradient-primary {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--color-secondary-hover), var(--color-secondary-hover)) padding-box,
+              linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%) border-box;
+}
+
+.border-gradient-accent {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--color-secondary-hover), var(--color-secondary-hover)) padding-box,
+              linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%) border-box;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Light blur background effects */
+.bg-radial-glow {
+  background: radial-gradient(circle, rgba(110, 60, 31, 0.08) 0%, transparent 75%);
+}
+
+.bg-radial-glow-accent {
+  background: radial-gradient(circle, rgba(0, 102, 51, 0.08) 0%, transparent 75%);
+}
+
+/* --- Premium Overhaul Additions --- */
+
+/* Efecto Ruido Fino (Film Grain) */
+.bg-noise {
+  position: relative;
+}
+.bg-noise::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Bento Grid Utilities */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+/* Split Text Reveal Mask */
+.text-reveal-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+/* Safe layout positioning (removing negative overlap clutter) */
+.overlap-top {
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Focus style overlays and high-contrast hovers */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.transition-contrast {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.transition-contrast:hover {
+  filter: brightness(1.1);
+}

@@ -1,0 +1,1 @@
+import{i as e,r as t}from"./vendor-animations-D5i2Saqd.js";var n=e(),r={initial:{opacity:0,y:20},animate:{opacity:1,y:0},exit:{opacity:0,y:-20}};function i({children:e}){return(0,n.jsx)(t.div,{variants:r,initial:`initial`,animate:`animate`,exit:`exit`,transition:{duration:.3,ease:`easeInOut`},children:e})}export{i as t};

@@ -57,8 +57,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'glass-nav shadow-premium py-2'
-            : 'bg-secondary/95 py-4 border-b border-secondary-light/30'
+            ? 'bg-secondary py-2 shadow-premium border-b border-secondary-light/30'
+            : 'bg-secondary py-4 border-b border-secondary-light/30'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

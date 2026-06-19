@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Package, Shield, FileText, CheckCircle, MapPin, Phone } from 'lucide-react';
 import { SEOHead } from '../components/ui/SEOHead';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+
 import { getServices } from '../lib/sanity';
 import type { Service } from '../lib/sanity';
 import gsap from 'gsap';
@@ -52,8 +52,6 @@ export const Servicios: React.FC = () => {
         title="Instalación de Malla Perimetral y Cerramientos"
         description="Industria de mallas y cercas en Guatemala. Ofrecemos servicios profesionales de instalación de malla ciclón, razor ribbon, privacinta y herrería a medida."
       />
-      <Breadcrumbs items={[{ label: "Servicios" }]} />
-      
       {/* Encabezado (Dark Theme Hero for High Impact) */}
       <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 text-center overflow-hidden">
         {/* Glows de fondo */}

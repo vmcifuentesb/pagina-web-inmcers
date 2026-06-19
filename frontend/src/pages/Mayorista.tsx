@@ -1,7 +1,6 @@
 import { Shield, Package, Truck, TrendingDown, Building, Users, ChevronRight, Phone } from "lucide-react"
 import { PageTransition } from "../components/ui/PageTransition"
 import { SEOHead } from "../components/ui/SEOHead"
-import { Breadcrumbs } from "../components/ui/Breadcrumbs"
 import { StaggerContainer, StaggerItem } from "../components/ui/StaggerReveal"
 import { Link } from "react-router-dom"
 
@@ -17,8 +16,6 @@ export function Mayorista() {
         title="Distribuidor Mayorista de Malla"
         description="Distribuidor mayorista de malla ciclón, tubería y cercas en Guatemala. Precios de fábrica para ferreterías, constructoras y distribuidores."
       />
-      <Breadcrumbs items={[{ label: "Mayorista" }]} />
-      
       {/* Encabezado (Dark Theme for high impact) */}
       <div className="bg-secondary text-white py-20 border-b border-secondary-light/30 relative overflow-hidden">
         {/* Glows de fondo */}

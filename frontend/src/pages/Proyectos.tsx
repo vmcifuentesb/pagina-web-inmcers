@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Filter, ChevronRight } from 'lucide-react';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import gsap from 'gsap';
 
 type Sector = 'Todos' | 'Industrial' | 'Residencial' | 'Agrícola';
 
@@ -103,8 +101,6 @@ export const Proyectos: React.FC = () => {
           content="Portafolio de proyectos de industria de mallas y cercas en Guatemala. Instalación de malla ciclón, razor ribbon y cerramientos residenciales, agrícolas e industriales." 
         />
       </Helmet>
-      <Breadcrumbs items={[{ label: "Proyectos" }]} />
-
       {/* Hero Section (Dark visual header) */}
       <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 text-center overflow-hidden">
         {/* Glows de fondo */}

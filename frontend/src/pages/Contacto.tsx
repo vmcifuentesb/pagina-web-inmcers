@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { getContactInfo } from '../lib/sanity';
 import type { ContactInfo } from '../lib/sanity';
 import FAQAccordion from '../components/ui/FAQAccordion';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+
 import gsap from 'gsap';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -120,8 +120,6 @@ export const Contacto: React.FC = () => {
           content="Comuníquese con la fábrica de mallas en Guatemala. Cotizaciones rápidas de malla ciclón, razor ribbon y cerramientos perimetrales. Asesoría experta a nivel nacional." 
         />
       </Helmet>
-      <Breadcrumbs items={[{ label: "Contacto" }]} />
-      
       {/* Encabezado (Dark Theme for high visual identity) */}
       <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 overflow-hidden text-center z-10">
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-radial-glow rounded-full blur-3xl opacity-50"></div>

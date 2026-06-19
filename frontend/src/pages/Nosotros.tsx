@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Shield, Users, Globe, HardHat } from 'lucide-react';
 import { SEOHead } from '../components/ui/SEOHead';
-import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+
 import { CoverageMap } from '../components/CoverageMap';
 import gsap from 'gsap';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -76,7 +76,6 @@ export const Nosotros: React.FC = () => {
         title="Más de 30 Años de Experiencia en Cerramientos Perimetrales"
         description="Conozca a Inmcers S.A, empresa líder en la fabricación de malla ciclón y cerramientos perimetrales en Guatemala. Más de 30 años de experiencia, garantía escrita y cobertura nacional."
       />
-      <Breadcrumbs items={[{ label: "Nosotros" }]} />
       
       {/* Encabezado Principal (Dark style for premium identity transition) */}
       <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 overflow-hidden z-10 text-center">

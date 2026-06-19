@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
 import { BRAND_DOC } from '../data/brand';
+import { img } from '../lib/images';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
             {/* Brand Logo with Rounded White Background */}
             <Link to="/" className="inline-flex items-center cursor-pointer bg-white px-4 py-1.5 rounded-lg shadow-sm transition-transform duration-300 hover:scale-[1.03] mb-2">
               <img
-                src="/images/logo/logo-oficial.png"
+                src={img("/images/logo/logo-oficial.png")}
                 alt="Inmcers S.A Logo"
                 className="h-8 w-auto object-contain"
               />

@@ -1,3 +1,5 @@
+import { img } from '../lib/images';
+
 export interface Producto {
   id: string
   nombre: string
@@ -16,7 +18,7 @@ export const productos: Producto[] = [
     id: "malla-ciclon",
     nombre: "Malla Ciclón Galvanizada",
     descripcion: "Fabricación propia en PVC y HG. Ideal para cerramientos residenciales, industriales y deportivos.",
-    imagen: "/images/fotos/Malla galvanizada (1).jpg",
+    imagen: img("/images/fotos/Malla galvanizada (1).jpg"),
     categoria: "Malla Ciclón",
     calibres: ["2 ¾\"", "2 ½\"", "2\"", "1 ½\"", "1\"", "¾\"", "½\""],
     alturas: ["0.6 m", "1.0 m", "1.2 m", "1.5 m", "1.8 m", "2.0 m", "2.5 m", "3.0 m"],
@@ -33,7 +35,7 @@ export const productos: Producto[] = [
     id: "razor-ribbon",
     nombre: "Razor Ribbon",
     descripcion: "Alambre de púas de alta seguridad ideal para perímetros críticos. Disponible en galvanzado y acero inoxidable.",
-    imagen: "/images/fotos/Alambre espigado (1).jpg",
+    imagen: img("/images/fotos/Alambre espigado (1).jpg"),
     categoria: "Seguridad",
     calibres: ["Tipo Concertina (espiral)", "Tipo Plano (Flat Wrap)", "Tipo Cruceta (Cross)"],
     alturas: ["3 anillas (Ø 350 mm)", "4 anillas (Ø 450 mm)", "5 anillas (Ø 600 mm)", "6 anillas (Ø 750 mm)"],
@@ -50,7 +52,7 @@ export const productos: Producto[] = [
     id: "privacinta",
     nombre: "Privacinta",
     descripcion: "Cinta plástica de privacidad para mallas en varios colores y medidas. Protección UV incluida.",
-    imagen: "/images/fotos/Privacinta verde3.jpg",
+    imagen: img("/images/fotos/Privacinta verde3.jpg"),
     categoria: "Accesorios",
     calibres: ["2 ¾\"", "2 ½\"", "2\"", "1\"", "½\""],
     acabados: ["Verde", "Negro", "Blanco", "Azul", "Rojo", "Marrón"],
@@ -66,7 +68,7 @@ export const productos: Producto[] = [
     id: "tuberia",
     nombre: "Tubería Galvanizada",
     descripcion: "Tubería estructural para postes y soportes de sistemas de cerramiento. Resistente a la corrosión.",
-    imagen: "/images/fotos/Bultos de alambre 2.jpeg",
+    imagen: img("/images/fotos/Bultos de alambre 2.jpeg"),
     categoria: "Estructura",
     calibres: ["1 ¼\" (42 mm)", "1 ½\" (48 mm)", "2\" (60 mm)"],
     alturas: ["3 m", "4 m", "5 m", "6 m", "Personalizable"],
@@ -83,7 +85,7 @@ export const productos: Producto[] = [
     id: "alambre-espigado",
     nombre: "Alambre Espigado",
     descripcion: "Alambre de púas tradicional para cerramientos rurales y perimetrales. Económico y resistente.",
-    imagen: "/images/fotos/Alambre espigado (2).jpg",
+    imagen: img("/images/fotos/Alambre espigado (2).jpg"),
     categoria: "Seguridad",
     calibres: ["Calibre 12", "Calibre 14", "Calibre 16"],
     acabados: ["Galvanizado (HG)", "Acero Inoxidable"],
@@ -99,7 +101,7 @@ export const productos: Producto[] = [
     id: "herreria",
     nombre: "Herrería en General",
     descripcion: "Estructuras metálicas personalizadas: puertas, portones, barandas, pasamanos y más. Diseño a medida.",
-    imagen: "/images/fotos/Portones (1).jpg",
+    imagen: img("/images/fotos/Portones (1).jpg"),
     categoria: "Estructura",
     acabados: ["Hierro forjado", "Acero estructural", "Galvanizado", "Pintura electroestática"],
     usos: ["Portones residenciales", "Puertas industriales", "Barandas y pasamanos", "Estructuras metálicas a medida"],
@@ -114,7 +116,7 @@ export const productos: Producto[] = [
     id: "techados",
     nombre: "Techados y Enlaminados",
     descripcion: "Soluciones de cubierta con láminas y estructuras metálicas para todo tipo de proyectos.",
-    imagen: "/images/fotos/Techos (1).jpg",
+    imagen: img("/images/fotos/Techos (1).jpg"),
     categoria: "Estructura",
     acabados: ["Lámina galvanizada", "Lámina pintro", "Policarbonato", "Teja metálica"],
     usos: ["Techos de bodegas", "Cobertizos industriales", "Marquesinas", "Áreas de carga"],

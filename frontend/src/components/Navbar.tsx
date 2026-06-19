@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Phone, MessageSquare, Calculator, ChevronDown } from 'lucide-react';
 import { BRAND_DOC } from '../data/brand';
+import { img } from '../lib/images';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ export const Navbar: React.FC = () => {
             {/* Brand Logo with Rounded White Background */}
             <Link to="/" className="flex items-center cursor-pointer bg-white px-4 py-1.5 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.03] shrink-0">
               <img
-                src="/images/logo/logo-oficial.png"
+                src={img("/images/logo/logo-oficial.png")}
                 alt="Inmcers S.A Logo"
                 className="h-8 md:h-10 w-auto object-contain"
               />

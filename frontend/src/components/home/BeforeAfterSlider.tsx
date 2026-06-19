@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { HelpCircle } from 'lucide-react';
+import { img } from '../../lib/images';
 
 export const BeforeAfterSlider: React.FC = () => {
   const [sliderPos, setSliderPos] = useState(50);
@@ -50,7 +51,7 @@ export const BeforeAfterSlider: React.FC = () => {
         style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
       >
         <img 
-          src="/images/fotos/Malla galvanizada (1).jpg" 
+          src={img("/images/fotos/Malla galvanizada (1).jpg")} 
           onError={(e) => { 
             (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&w=1200&auto=format&fit=crop"; 
           }}

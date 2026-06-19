@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Shield, Users, Globe, HardHat } from 'lucide-react';
 import { SEOHead } from '../components/ui/SEOHead';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import CoverageMap from '../components/CoverageMap';
+import { CoverageMap } from '../components/CoverageMap';
 import gsap from 'gsap';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { img } from '../lib/images';
 
 export const Nosotros: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -128,7 +129,7 @@ export const Nosotros: React.FC = () => {
           <div className={`relative flex justify-center transition-all duration-700 ease-out transform ${identityVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
             <div className="relative bg-white p-4 rounded-3xl max-w-lg w-full shadow-md border border-slate-200/80">
               <img
-                src="/images/nosotros_fabrica.jpg"
+                src={img("/images/nosotros_fabrica.jpg")}
                 alt="Maquinaria y Proceso de fabricación Inmcers S.A"
                 className="rounded-2xl object-cover w-full h-[380px] shadow-sm"
                 loading="lazy"

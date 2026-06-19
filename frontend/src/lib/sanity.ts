@@ -1,3 +1,5 @@
+import { img } from './images';
+
 export interface Product {
   id: string;
   title: string;
@@ -42,7 +44,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Fabricado con tubo galvanizado chapa 18',
       'Medidas estándar: 1 ¼", 1 ½" y 2"'
     ],
-    image: '/images/galeria/4.jpg',
+    image: img(''),
     featured: false
   },
   {
@@ -55,7 +57,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Aisladores de alta resistencia eléctrica (porcelana)',
       'Espadas y postes diseñados para máxima tensión'
     ],
-    image: '/images/galeria/1.jpg',
+    image: img(''),
     featured: false
   },
   // --- PRODUCTOS ---
@@ -69,7 +71,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Cuadro de 2 ¾", 2 ½", 2", 1 ½", 1" ¾ y ½"',
       'Resistente a intemperie'
     ],
-    image: '/images/galeria/4.jpg',
+    image: img(''),
     featured: true
   },
   {
@@ -82,7 +84,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Medidas de privacinta: 2 ¾", 2 ½", 2", 1 ½" y 1"',
       'Colores: Verde, Gris, Azul'
     ],
-    image: '/images/galeria/2.jpg',
+    image: img(''),
     featured: true
   },
   {
@@ -95,7 +97,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Razor Ribbon: Galvanizado o HG / Acero inoxidable',
       'Alambre Espigado: Tipo Económico'
     ],
-    image: '/images/galeria/3.jpg',
+    image: img(''),
     featured: true
   },
   {
@@ -108,7 +110,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Estructuras reticulares robustas',
       'Armado a medida'
     ],
-    image: '/images/galeria/5.jpg',
+    image: img(''),
     featured: false
   },
   {
@@ -121,7 +123,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Tubería: medidas 1 ¼", 1 ½" y 2"',
       'Planas: Hierro plano negro de ¾ x 3/16'
     ],
-    image: '/images/galeria/4.jpg',
+    image: img(''),
     featured: false
   },
   // --- HERRERÍA ---
@@ -135,7 +137,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Soldadura profesional garantizada',
       'Fabricación 100% a medida'
     ],
-    image: '/images/galeria/1.jpg',
+    image: img(''),
     featured: true
   },
   // --- INSTALACIONES ---
@@ -149,7 +151,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Supervisión de obra de principio a fin',
       'Técnicos especialistas en cerramientos'
     ],
-    image: '/images/hero_portada.jpg',
+    image: img(''),
     featured: true
   }
 ];

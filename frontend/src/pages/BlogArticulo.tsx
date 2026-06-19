@@ -4,6 +4,7 @@ import { PageTransition } from "../components/ui/PageTransition"
 import { SEOHead } from "../components/ui/SEOHead"
 import { articulos } from "../data/articulos"
 import { NotFound } from "./NotFound"
+import { img } from "../lib/images"
 
 export function BlogArticulo() {
   const { id } = useParams<{ id: string }>()
@@ -16,7 +17,7 @@ export function BlogArticulo() {
       <SEOHead
         title={articulo.titulo}
         description={articulo.resumen}
-        ogImage="/images/logo.png"
+        ogImage={img("/images/logo.png")}
       />
       <article className="py-20 px-4 mt-[104px] bg-slate-50 bg-noise">
         <div className="max-w-3xl mx-auto">

@@ -12,6 +12,7 @@ import FenceSimulator from '../components/home/FenceSimulator';
 import CotizadorRapido from '../components/ui/CotizadorRapido';
 import FAQAccordion from '../components/ui/FAQAccordion';
 import { productos } from '../data/productos';
+import { img } from '../lib/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +22,7 @@ const heroSlides = [
     subtitle: "Suministro e instalación de malla ciclón galvanizada (HG) y recubierta en PVC con puntualidad y altos estándares de durabilidad.",
     badge: "Orgullosamente Guatemaltecos",
     btnText: "Estructurar Presupuesto de Materiales",
-    img: "/images/fotos/_MG_3133.JPG",
+    img: img("/images/fotos/_MG_3133.JPG"),
     fallback: "https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&w=1200"
   },
   {
@@ -29,7 +30,7 @@ const heroSlides = [
     subtitle: "Protección física de alto impacto con concertinas de cuchilla galvanizada o acero inoxidable. Resistencia y disuasión definitiva.",
     badge: "Seguridad Perimetral Certificada",
     btnText: "Ver Catálogo Técnico de Seguridad",
-    img: "/images/fotos/Alambre espigado (1).jpg",
+    img: img("/images/fotos/Alambre espigado (1).jpg"),
     fallback: "https://images.unsplash.com/photo-1558521958-f121d8570296?q=80&w=1200"
   },
   {
@@ -37,7 +38,7 @@ const heroSlides = [
     subtitle: "Fabricamos soluciones integrales de cercado. Privacinta de alta densidad para máxima discreción y elegancia en tu propiedad.",
     badge: "Estética y Funcionalidad",
     btnText: "Escribirnos a WhatsApp",
-    img: "/images/fotos/Privacinta verde2.JPG",
+    img: img("/images/fotos/Privacinta verde2.JPG"),
     fallback: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200"
   }
 ];
@@ -47,21 +48,21 @@ const portfolioProjects = [
     title: "Complejo Logístico Industrial",
     category: "Industrial",
     desc: "Cercado perimetral de alta seguridad utilizando malla ciclón reforzada de 2.4 metros de altura con postes galvanizados y sistemas de Razor Ribbon superior.",
-    image: "/images/fotos/_MG_3133.JPG",
+    image: img("/images/fotos/_MG_3133.JPG"),
     fallback: "https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&w=600"
   },
   {
     title: "Canchas Deportivas y Recreativas",
     category: "Deportivo",
     desc: "Instalación de malla de PVC Verde Bosque de 3 metros, combinando perfectamente con el entorno ecológico y postes reforzados de alta durabilidad.",
-    image: "/images/fotos/Privacinta verde2.JPG",
+    image: img("/images/fotos/Privacinta verde2.JPG"),
     fallback: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600"
   },
   {
     title: "Protección Residencial con Privacinta",
     category: "Residencial",
     desc: "Instalación de cercado perimetral con inserción de Privacinta para brindar un 95% de privacidad visual y una estética moderna a la propiedad.",
-    image: "/images/fotos/Privacinta verde3.jpg",
+    image: img("/images/fotos/Privacinta verde3.jpg"),
     fallback: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600"
   }
 ];

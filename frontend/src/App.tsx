@@ -3,8 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
 import { StructuredData } from './components/ui/StructuredData';
 import { BackToTop } from './components/ui/BackToTop';
+
+const BASENAME = import.meta.env.BASE_URL.replace(/\/+$/, '');
 
 // Carga perezosa (Lazy Loading) de las páginas para optimizar WPO
 const Home = lazy(() => import('./pages/Home'));
@@ -35,7 +38,7 @@ const PageSpinner: React.FC = () => (
 function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={BASENAME}>
         <Helmet>
           <title>Inmcers S.A — Industria de mallas y cercas</title>
           <meta 

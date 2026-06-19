@@ -48,7 +48,7 @@ export const GaugeSelector: React.FC = () => {
             className={`w-full p-2.5 rounded-xl text-xs font-bold border-2 transition-all duration-200 ${
               selectedGauge === g.name 
                 ? 'bg-primary border-primary text-white shadow-md' 
-                : 'bg-slate-50 border-slate-200 text-slate-650 hover:border-primary/50'
+                : 'bg-white border-slate-200 text-slate-700 hover:border-primary/50'
             }`}
           >
             {g.name}
@@ -71,11 +71,11 @@ export const GaugeSelector: React.FC = () => {
           <div className="grid grid-cols-2 gap-2">
             <div>
               <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider">Espesor Real:</span>
-              <span className="font-extrabold text-slate-850">{current.thickness}</span>
+              <span className="font-extrabold text-slate-800">{current.thickness}</span>
             </div>
             <div>
               <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider">Fuerza Estructural:</span>
-              <span className="font-extrabold text-slate-850">{current.strength}</span>
+              <span className="font-extrabold text-slate-800">{current.strength}</span>
             </div>
           </div>
           <div className="pt-2 border-t border-slate-200/50">

@@ -35,7 +35,7 @@ jobs:
       - name: 📂 Deploy via FTP to new.inmcers.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 181.189.138.174
+          server: new.inmcers.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./frontend/dist/

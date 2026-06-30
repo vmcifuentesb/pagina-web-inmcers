@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to new.inmcers.com
 
 on:
   push:
@@ -10,9 +10,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     defaults:
       run:
@@ -35,9 +32,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: 📂 Deploy via FTP to new.inmcers.com
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
-          cname: true
+          server: 181.189.138.174
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./frontend/dist/
+          server-dir: /new.inmcers.com/

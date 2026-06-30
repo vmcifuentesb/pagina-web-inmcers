@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import { StructuredData } from './components/ui/StructuredData';
 import { BackToTop } from './components/ui/BackToTop';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 const BASENAME = import.meta.env.BASE_URL.replace(/\/+$/, '');
 
@@ -39,6 +40,7 @@ function App() {
   return (
     <HelmetProvider>
       <BrowserRouter basename={BASENAME}>
+        <ScrollToTop />
         <Helmet>
           <title>Inmcers S.A — Industria de mallas y cercas</title>
           <meta 

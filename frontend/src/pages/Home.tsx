@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Check, Shield, Award, Clock, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
+import { Check, Shield, Award, Clock, ChevronLeft, ChevronRight, MessageSquare, Phone, MapPin } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import BeforeAfterSlider from '../components/home/BeforeAfterSlider';
 import ClimateEvaluator from '../components/home/ClimateEvaluator';
@@ -116,83 +116,174 @@ export const Home: React.FC = () => {
         />
       </Helmet>
       
-      {/* 1. SECCIÓN HERO CON SLIDER AUTOMÁTICO + PRE-COTIZADOR EXPRESS (Dark background) */}
-      <section className="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-300 min-h-[600px] flex items-center border-b border-secondary-light/20 bg-secondary text-white">
-        {/* Slide Image Background under layer */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroSlides[currentSlide].img} 
-            onError={(e) => { 
-              (e.target as HTMLImageElement).src = heroSlides[currentSlide].fallback; 
-            }}
-            alt={heroSlides[currentSlide].title} 
-            className="w-full h-full object-cover opacity-20 filter brightness-[0.4]"
-          />
-        </div>
+      {/* 1. SECCIÓN HERO DE CONTACTO DIRECTO Y BIENVENIDA (Tema Claro y Amigable) */}
+      <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-100 to-white border-b border-slate-200 overflow-hidden">
+        {/* Patrón de Malla de fondo sutil */}
+        <div className="absolute inset-0 bg-mesh-pattern opacity-[0.03] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Glow Effects */}
-        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute inset-0 bg-mesh-pattern opacity-15 mix-blend-overlay"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
-          {/* Contenido Izquierdo: Slides dinámicos */}
+        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          {/* Contenido Izquierdo: Información de Contacto Inmediato y Legible */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <span className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider">
-              <Shield className="w-3.5 h-3.5 text-primary" />
-              <span>{heroSlides[currentSlide].badge}</span>
+            <span className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-black text-xs uppercase tracking-wider">
+              <Shield className="w-3.5 h-3.5 text-primary animate-pulse" />
+              <span>Atención Directa al Altiplano y Todo el País</span>
             </span>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white transition-all duration-500 min-h-[100px]">
-              {heroSlides[currentSlide].title}
+            <h1 className="text-3xl sm:text-4xl lg:text-5.5xl font-black tracking-tight leading-tight text-slate-900">
+              Fabricación de Mallas <span className="text-primary font-extrabold">INMCERS S.A.</span>
             </h1>
             
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed transition-all duration-500 max-w-xl">
-              {heroSlides[currentSlide].subtitle}
+            <p className="text-sm sm:text-base text-slate-650 leading-relaxed max-w-2xl font-medium">
+              Somos fabricantes directos. Le asesoramos gratis en su proyecto de cercado para fincas, residencias y empresas. Contáctenos inmediatamente a través de nuestros canales oficiales:
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 pt-4">
+
+            {/* Panel de Contacto Rápido y Visible */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {/* PBX Teléfono */}
+              <a 
+                href="tel:+50222182800"
+                className="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-primary/50 hover:shadow-md transition-all duration-200 group cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200 group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/20 transition-all">
+                  <Phone className="w-5 h-5 text-slate-700 group-hover:text-primary" />
+                </div>
+                <div className="text-left">
+                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Llamada Directa</span>
+                  <span className="font-title font-black text-slate-900 group-hover:text-primary transition-colors">PBX: 2218-2800</span>
+                </div>
+              </a>
+
+              {/* WhatsApp Ventas */}
               <button 
-                onClick={() => triggerWhatsApp(heroSlides[currentSlide].btnText)}
-                className="bg-primary hover:bg-primary-hover text-white font-bold px-6 py-3.5 rounded-xl text-center shadow-lg hover:scale-[1.02] active:scale-[0.98] transition duration-200 text-xs flex items-center justify-center space-x-2 cursor-pointer"
+                onClick={() => triggerWhatsApp("Hola, me comunico desde la página web de Inmcers y deseo solicitar una cotización de ventas.")}
+                className="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-green-500/50 hover:shadow-md transition-all duration-200 group text-left cursor-pointer"
               >
-                <i className="fa-brands fa-whatsapp text-sm text-green-400"></i>
-                <span>{heroSlides[currentSlide].btnText}</span>
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200 group-hover:bg-green-50 group-hover:text-green-600 group-hover:border-green-200 transition-all">
+                  <i className="fa-brands fa-whatsapp text-xl text-slate-700 group-hover:text-green-500"></i>
+                </div>
+                <div>
+                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">WhatsApp Directo</span>
+                  <span className="font-title font-black text-slate-900 group-hover:text-green-600 transition-colors">Ventas: 4212-0707</span>
+                </div>
               </button>
-              <Link 
-                to="/productos"
-                className="bg-secondary-hover/80 hover:bg-secondary text-white border border-secondary-light font-semibold px-6 py-3.5 rounded-xl text-center transition duration-200 text-xs flex items-center justify-center cursor-pointer"
+
+              {/* WhatsApp Proyectos */}
+              <button 
+                onClick={() => triggerWhatsApp("Hola, me comunico desde la página web de Inmcers y deseo solicitar asesoría técnica para un proyecto.")}
+                className="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-green-500/50 hover:shadow-md transition-all duration-200 group text-left cursor-pointer"
               >
-                Ver Catálogo de Productos
-              </Link>
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200 group-hover:bg-green-50 group-hover:text-green-600 group-hover:border-green-200 transition-all">
+                  <i className="fa-brands fa-whatsapp text-xl text-slate-700 group-hover:text-green-500"></i>
+                </div>
+                <div>
+                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Proyectos Especiales</span>
+                  <span className="font-title font-black text-slate-900 group-hover:text-green-600 transition-colors">Proyectos: 5856-0315</span>
+                </div>
+              </button>
+
+              {/* Ubicación Física */}
+              <div className="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200">
+                  <MapPin className="w-5 h-5 text-slate-700" />
+                </div>
+                <div className="text-left">
+                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dirección y Planta</span>
+                  <span className="font-title font-black text-slate-800 text-xs line-clamp-1" title="Colonia Guajitos, Zona 21, Guatemala">Zona 21, Ciudad de Guatemala</span>
+                </div>
+              </div>
             </div>
 
-            {/* Slider Dots */}
-            <div className="flex space-x-2 pt-6">
-              {heroSlides.map((_, idx) => (
-                <button 
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`h-2.5 w-2.5 rounded-full transition-all duration-300 cursor-pointer ${idx === currentSlide ? 'bg-primary w-7' : 'bg-secondary-light/60'}`}
-                  aria-label={`Ir al slide ${idx + 1}`}
-                ></button>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Link 
+                to="/productos"
+                className="bg-primary hover:bg-primary-hover text-white font-black px-6 py-4 rounded-xl text-center shadow-md hover:scale-[1.02] active:scale-[0.98] transition duration-200 text-xs cursor-pointer"
+              >
+                Ver Catálogo de Mallas y Tubería
+              </Link>
+              <Link 
+                to="/contacto"
+                className="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-6 py-4 rounded-xl text-center transition duration-200 text-xs cursor-pointer"
+              >
+                Ver Ubicación e indicaciones
+              </Link>
             </div>
           </div>
 
-          {/* Contenido Derecho: Pre-Cotizador Express Card */}
-          <div className="lg:col-span-5 bg-secondary-hover/90 text-white rounded-3xl shadow-premium p-6 border border-secondary-light/45 relative backdrop-blur-md">
-            <div className="absolute top-0 right-0 transform translate-x-3 -translate-y-3 bg-primary text-white font-black text-[10px] px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
-              ¡Respuesta Rápida!
+          {/* Contenido Derecho: Foto de Malla Galvanizada */}
+          <div className="lg:col-span-5 relative group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+            <div className="relative border border-slate-200 rounded-3xl overflow-hidden shadow-2xl bg-white p-3">
+              <img 
+                src={img("/images/fotos/Malla galvanizada (1).jpg")}
+                alt="Malla Galvanizada INMCERS" 
+                className="w-full h-80 lg:h-[400px] object-cover rounded-2xl group-hover:scale-[1.01] transition-transform duration-350"
+              />
+              <div className="absolute bottom-6 left-6 right-6 bg-slate-900/90 text-white p-4 rounded-xl backdrop-blur-sm border border-slate-800/50 text-left">
+                <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Fabricación en Planta</span>
+                <h4 className="font-title font-black text-sm">Malla Galvanizada de Alta Resistencia</h4>
+                <p className="text-[11px] text-slate-300 mt-1">Nuestra especialidad con acabados en triple galvanizado.</p>
+              </div>
             </div>
-            <h3 className="text-lg font-black tracking-tight text-white flex items-center space-x-2 mb-1">
+          </div>
+        </div>
+      </section>
+
+      {/* 1.1 COTIZADOR EXPRESS Y CARRUSEL DE PRODUCTOS (Reubicado en sección sutil) */}
+      <section className="py-12 bg-slate-50 border-b border-slate-200 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Carrusel Izquierdo */}
+          <div className="lg:col-span-7 space-y-4">
+            <div className="text-left space-y-1">
+              <span className="text-xs font-bold text-primary uppercase tracking-widest">Línea de Productos</span>
+              <h3 className="text-2xl font-black text-slate-900">Soluciones de Cercado Perimetral</h3>
+            </div>
+            
+            {/* Carrusel de Productos */}
+            <div className="relative rounded-2xl overflow-hidden h-64 shadow-md bg-secondary text-white">
+              <div className="absolute inset-0">
+                <img 
+                  src={heroSlides[currentSlide].img} 
+                  onError={(e) => { 
+                    (e.target as HTMLImageElement).src = heroSlides[currentSlide].fallback; 
+                  }}
+                  alt={heroSlides[currentSlide].title} 
+                  className="w-full h-full object-cover opacity-20 filter brightness-[0.4]"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 right-6 text-left space-y-2">
+                <span className="text-[9px] font-bold bg-primary px-2.5 py-1 rounded text-white uppercase tracking-widest">
+                  {heroSlides[currentSlide].badge}
+                </span>
+                <h4 className="font-title font-black text-lg text-white">{heroSlides[currentSlide].title}</h4>
+                <p className="text-xs text-slate-300 line-clamp-2">{heroSlides[currentSlide].subtitle}</p>
+                <div className="flex space-x-1.5 pt-2">
+                  {heroSlides.map((_, idx) => (
+                    <button 
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${idx === currentSlide ? 'bg-primary w-5' : 'bg-slate-600 w-1.5'}`}
+                      aria-label={`Slide ${idx + 1}`}
+                    ></button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Cotizador Express Derecho */}
+          <div className="lg:col-span-5 bg-white text-slate-800 rounded-3xl shadow-lg p-6 border border-slate-200 relative text-left">
+            <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2 bg-primary text-white font-black text-[9px] px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider">
+              Express
+            </div>
+            <h3 className="text-base font-black tracking-tight text-slate-900 flex items-center space-x-2 mb-1">
               <Clock className="w-5 h-5 text-primary" />
               <span>Cotizador Express</span>
             </h3>
-            <p className="text-[11px] text-slate-400 mb-6">
-              Calcula y solicita tu cotización de materiales vía WhatsApp en solo 3 pasos.
+            <p className="text-[11px] text-slate-500 mb-4">
+              Obtenga una estimación preliminar de materiales directamente en su WhatsApp.
             </p>
-            
             <CotizadorRapido />
           </div>
         </div>
@@ -274,7 +365,7 @@ export const Home: React.FC = () => {
               <h3 className="text-xl font-extrabold text-white">
                 Comparador Técnico de Grosor (Gauge)
               </h3>
-              <p className="text-xs text-slate-355 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed">
                 En la fabricación de mallas, el calibre define la fuerza del tejido. Explora los espesores estándar que producimos directamente en planta para adaptarnos a tus requerimientos.
               </p>
               
@@ -453,7 +544,7 @@ export const Home: React.FC = () => {
                 <h3 className="text-xl font-bold text-white leading-tight">
                   {portfolioProjects[portfolioIndex].title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-355 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {portfolioProjects[portfolioIndex].desc}
                 </p>
               </div>
@@ -518,7 +609,7 @@ export const Home: React.FC = () => {
               ¿Listo para asegurar su proyecto o propiedad?
             </h2>
             <p className="text-sm sm:text-base text-slate-350 leading-relaxed max-w-xl mx-auto font-medium">
-              Suministramos materiales directos de fábrica a toda Guatemala o realizamos la instalación profesional llave en mano con total garantía de Inmcers S.A.
+              Suministramos materiales directos de fábrica a toda Guatemala o realizamos la instalación profesional con total garantía de Inmcers S.A.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
               <Link

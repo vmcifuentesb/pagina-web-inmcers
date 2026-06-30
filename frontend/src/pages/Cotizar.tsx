@@ -201,11 +201,10 @@ export const Cotizar: React.FC = () => {
                     <select
                       value={calcAltura}
                       onChange={(e) => setCalcAltura(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-955 focus:outline-none focus:border-primary text-sm font-semibold cursor-pointer"
+                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 focus:outline-none focus:border-primary text-sm font-semibold cursor-pointer"
                     >
                       <option value="1.00">1.00 metro</option>
                       <option value="1.50">1.50 metros (Estándar)</option>
-                      <option value="1.75">1.75 metros</option>
                       <option value="2.00">2.00 metros</option>
                       <option value="2.50">2.50 metros</option>
                       <option value="3.00">3.00 metros</option>
@@ -306,7 +305,7 @@ export const Cotizar: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Metros Lineales Aproximados *
                       </label>
                       <input
@@ -321,7 +320,7 @@ export const Cotizar: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Altura de la Malla
                       </label>
                       <select
@@ -331,7 +330,6 @@ export const Cotizar: React.FC = () => {
                       >
                         <option value="1.00">1.00 metro</option>
                         <option value="1.50">1.50 metros (Estándar)</option>
-                        <option value="1.75">1.75 metros</option>
                         <option value="2.00">2.00 metros</option>
                         <option value="2.50">2.50 metros</option>
                         <option value="3.00">3.00 metros</option>
@@ -339,7 +337,7 @@ export const Cotizar: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Material Principal Deseado
                       </label>
                       <select
@@ -348,14 +346,15 @@ export const Cotizar: React.FC = () => {
                         className="w-full px-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
                       >
                         <option value="malla_ciclon">Malla Ciclón Galvanizada (HG)</option>
-                        <option value="malla_pvc">Malla Ciclón PVC (Colores)</option>
+                        <option value="malla_pvc">Malla Ciclón PVC Verde</option>
+                        <option value="malla_privacinta">Malla Ciclón + Privacinta (Verde, Gris, Azul)</option>
                         <option value="razor_ribbon">Solo Razor Ribbon / Concertina</option>
                         <option value="paneles">Euro Reja 3D (Paneles rígidos)</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         ¿Requiere Mano de Obra de Instalación?
                       </label>
                       <div className="flex gap-4 mt-1">
@@ -410,7 +409,7 @@ export const Cotizar: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2 md:col-span-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Nombre Completo *
                       </label>
                       <input
@@ -424,7 +423,7 @@ export const Cotizar: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Teléfono / WhatsApp *
                       </label>
                       <div className="relative">
@@ -441,7 +440,7 @@ export const Cotizar: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Correo Electrónico
                       </label>
                       <div className="relative">
@@ -450,14 +449,14 @@ export const Cotizar: React.FC = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-955 font-body text-sm focus:outline-none focus:border-primary"
+                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary"
                           placeholder="ventas@empresa.com"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Empresa / Razón Social (Opcional)
                       </label>
                       <input
@@ -470,7 +469,7 @@ export const Cotizar: React.FC = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="block text-xs font-bold text-slate-655 uppercase tracking-wider">
+                      <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                         Ubicación del Terreno / Proyecto *
                       </label>
                       <input

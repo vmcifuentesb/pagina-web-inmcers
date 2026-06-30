@@ -10,7 +10,7 @@ export const faqData: FAQItem[] = [
   },
   {
     pregunta: "¿Hacen instalación en todo Guatemala?",
-    respuesta: "Sí, realizamos proyectos llave en mano en los 22 departamentos de Guatemala. Nuestros equipos técnicos se desplazan a cualquier ubicación para garantizar una instalación profesional, tanto en áreas urbanas como rurales."
+    respuesta: "Sí, realizamos proyectos en los 22 departamentos de Guatemala. Nuestros equipos técnicos se desplazan a cualquier ubicación para garantizar una instalación profesional, tanto en áreas urbanas como rurales."
   },
   {
     pregunta: "¿Cuánto tiempo toma la instalación de un cerramiento?",
@@ -26,7 +26,7 @@ export const faqData: FAQItem[] = [
   },
   {
     pregunta: "¿Qué diferencia hay entre malla ciclón PVC y HG?",
-    respuesta: "La malla PVC tiene un recubrimiento plástico que ofrece mayor resistencia a la corrosión y está disponible en varios colores como verde, negro y blanco. La malla HG (Galvanizada por Inmersión en Caliente) es más económica y también resistente a la intemperie."
+    respuesta: "La malla PVC tiene un recubrimiento plástico que ofrece mayor resistencia a la corrosión y está disponible únicamente en color verde. La malla HG (Galvanizada por Inmersión en Caliente) es la opción tradicional, económica y altamente resistente a la intemperie."
   },
   {
     pregunta: "¿El razor ribbon es legal en Guatemala?",

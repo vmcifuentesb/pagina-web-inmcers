@@ -16,5 +16,5 @@ export const proyectos: Proyecto[] = [
   { titulo: "Techado Metálico", desc: "Estructura metálica y enlaminado para área de carga de 200m²", ubicacion: "Zona 21, Guatemala", imagen: img("/images/fotos/Techos (2).jpg") },
   { titulo: "Cerramiento Agrícola", desc: "Instalación de tubería galvanizada y malla ciclón para finca agrícola", ubicacion: "Escuintla", imagen: img("/images/fotos/Malla galvanizada (7).jpg") },
   { titulo: "Proyecto Educativo", desc: "Cerramiento perimetral para colegio con malla ciclón PVC y accesos", ubicacion: "Zona 7, Guatemala", imagen: img("/images/fotos/Malla PVC (3).jpg") },
-  { titulo: "Proyecto Integral", desc: "Fabricación e instalación llave en mano de cerramiento completo para centro comercial", ubicacion: "Huehuetenango", imagen: img("/images/fotos/Embajada de Brasil.jpeg") },
+  { titulo: "Proyecto Integral", desc: "Fabricación e instalación de cerramiento completo para centro comercial", ubicacion: "Huehuetenango", imagen: img("/images/fotos/Embajada de Brasil.jpeg") },
 ]

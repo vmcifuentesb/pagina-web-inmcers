@@ -160,16 +160,16 @@ export const Servicios: React.FC = () => {
                 Servicio a Domicilio en Guatemala
               </span>
               <h2 className="text-2xl sm:text-3xl font-title font-extrabold !text-white">
-                Levantamiento de Medidas y Visita Técnica sin Costo
+                Levantamiento de Medidas y Visita Técnica
               </h2>
               <p className="font-body text-xs sm:text-sm !text-white/80 leading-relaxed max-w-2xl">
-                ¿Tiene dudas sobre los metros exactos de su perímetro o la inclinación de su terreno? Nuestros técnicos supervisores viajan a su propiedad o industria en todo el país para realizar la medición física exacta de forma 100% gratuita al solicitar instalación.
+                ¿Tiene dudas sobre los metros exactos de su perímetro o la inclinación de su terreno? Nuestros técnicos supervisores viajan a su propiedad o industria para realizar la medición física y planificación del cercado (para áreas o departamentos lejanos aplicará cargo por viáticos de visita técnica).
               </p>
             </div>
 
             <div className="lg:col-span-4 flex justify-start lg:justify-end">
               <a
-                href="https://wa.me/50242120707?text=Hola%20Inmcers%20S.A,%20quiero%20coordinar%20una%20visita%20técnica%20gratuita%20para%20medir%20mi%20terreno."
+                href="https://wa.me/50242120707?text=Hola%20Inmcers%20S.A,%20quiero%20coordinar%20una%20visita%20técnica%20para%20medir%20mi%20terreno."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-body font-bold text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform duration-200"

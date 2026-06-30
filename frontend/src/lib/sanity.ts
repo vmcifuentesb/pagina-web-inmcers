@@ -5,7 +5,7 @@ export interface Product {
   title: string;
   slug: string;
   description: string;
-  category: 'malla-ciclon' | 'razor-ribbon' | 'privacinta' | 'tuberia' | 'herreria';
+  category: 'malla-ciclon' | 'razor-ribbon' | 'privacinta' | 'tuberia' | 'herreria' | 'accesorios' | 'instalaciones';
   specifications: string[];
   image: string;
   featured: boolean;
@@ -33,97 +33,157 @@ export interface ContactInfo {
 
 // Datos locales reales de Inmcers S.A extraídos de la documentación oficial
 const LOCAL_PRODUCTS: Product[] = [
-  // --- ACCESORIOS ---
-  {
-    id: 'prod-1',
-    title: 'Codos, Escuadras y Copas',
-    slug: 'accesorios-tuberia',
-    description: 'Accesorios galvanizados como codos, escuadras/esquineros, copas simples y copas dobles con abrazadera de media luna, diseñados para trabajos de cerramiento y tubería PVC.',
-    category: 'accesorios' as any,
-    specifications: [
-      'Fabricado con tubo galvanizado chapa 18',
-      'Medidas estándar: 1 ¼", 1 ½" y 2"'
-    ],
-    image: img(''),
-    featured: false
-  },
-  {
-    id: 'prod-2',
-    title: 'Aisladores y Postes para Razor',
-    slug: 'aisladores-postes',
-    description: 'Aisladores de porcelana y postes reforzados para la instalación segura de Razor Ribbon y cercos electrificados.',
-    category: 'accesorios' as any,
-    specifications: [
-      'Aisladores de alta resistencia eléctrica (porcelana)',
-      'Espadas y postes diseñados para máxima tensión'
-    ],
-    image: img(''),
-    featured: false
-  },
-  // --- PRODUCTOS ---
+  // --- PRODUCTOS DE MALLA ---
   {
     id: 'prod-3',
-    title: 'Malla Galvanizada',
+    title: 'Malla Ciclón Galvanizada',
     slug: 'malla-galvanizada',
-    description: 'Fabricación de malla galvanizada de alta calidad y resistencia para seguridad perimetral. Excelente protección contra la corrosión.',
-    category: 'malla-ciclon' as any,
+    description: 'Fabricación propia de malla galvanizada de alta calidad y resistencia para seguridad perimetral. Excelente protección contra la corrosión.',
+    category: 'malla-ciclon',
     specifications: [
-      'Cuadro de 2 ¾", 2 ½", 2", 1 ½", 1" ¾ y ½"',
-      'Resistente a intemperie'
+      'Calibres disponibles: 11, 12, 12.5, 13, 14',
+      'Alturas estándar: 1.0, 1.5, 2.0, 2.5, 3.0 metros',
+      'Acabados en Triple Galvanizado (HG)',
+      'Medidas de cuadro: desde 2 ¾" hasta ½" de abertura'
     ],
-    image: img(''),
+    image: img('/images/fotos/Malla galvanizada (1).jpg'),
     featured: true
   },
   {
     id: 'prod-4',
+    title: 'Malla PVC Verde',
+    slug: 'malla-pvc-verde',
+    description: 'Malla ciclón con recubrimiento de PVC en color verde. Ofrece protección adicional contra la humedad y una excelente estética para áreas residenciales o deportivas.',
+    category: 'malla-ciclon',
+    specifications: [
+      'Disponible únicamente en color Verde Bosque',
+      'Mayor durabilidad en climas húmedos y zonas costeras',
+      'Calibres reforzados para mayor firmeza'
+    ],
+    image: img('/images/fotos/Malla PVC (1).jpg'),
+    featured: true
+  },
+  {
+    id: 'prod-4-priva',
     title: 'Malla PVC con Privacinta',
-    slug: 'malla-pvc',
-    description: 'Malla recubierta en PVC (verde, gris o azul) entrelazada con privacinta para máximo resguardo visual y estético.',
-    category: 'malla-ciclon' as any,
+    slug: 'malla-pvc-privacinta',
+    description: 'Malla ciclón combinada con cintas plásticas de privacidad (Privacinta) entrelazadas en el tejido para un bloqueo visual del 95%.',
+    category: 'malla-ciclon',
     specifications: [
-      'Medidas de privacinta: 2 ¾", 2 ½", 2", 1 ½" y 1"',
-      'Colores: Verde, Gris, Azul'
+      'Privacinta disponible en Verde, Gris y Azul',
+      'Bloqueo visual óptimo para residencias y colegios',
+      'Material con protección UV para evitar decoloración'
     ],
-    image: img(''),
+    image: img('/images/fotos/Instalación Privacinta.jpeg'),
     featured: true
   },
+  // --- ACCESORIOS ---
   {
-    id: 'prod-5',
-    title: 'Razor Ribbon y Alambre Espigado',
-    slug: 'razor-ribbon',
-    description: 'Barrera de alta seguridad física tipo concertina (Razor) y alambre espigado tipo económico para refuerzos superiores de bardas.',
-    category: 'malla-ciclon' as any,
+    id: 'acc-1',
+    title: 'Tapones Plásticos',
+    slug: 'tapones-plasticos',
+    description: 'Tapones plásticos de alta calidad para sellar extremos de tubos galvanizados, evitando filtraciones de agua y óxido interno.',
+    category: 'accesorios',
     specifications: [
-      'Razor Ribbon: Galvanizado o HG / Acero inoxidable',
-      'Alambre Espigado: Tipo Económico'
+      'Para tubos de diámetros de 1 ¼", 1 ½" y 2"',
+      'Material termoplástico resistente a la intemperie'
     ],
-    image: img(''),
-    featured: true
-  },
-  {
-    id: 'prod-6',
-    title: 'Gaviones',
-    slug: 'gaviones',
-    description: 'Estructuras de malla galvanizada de alta resistencia para muros de contención, estabilización de taludes y decoración exterior.',
-    category: 'malla-ciclon' as any,
-    specifications: [
-      'Estructuras reticulares robustas',
-      'Armado a medida'
-    ],
-    image: img(''),
+    image: img('/images/fotos/Pedidos a medida.png'),
     featured: false
   },
   {
-    id: 'prod-7',
-    title: 'Tubería Galvanizada y Hierro Plano',
-    slug: 'tuberia-hierro',
-    description: 'Tubería galvanizada para cerramientos y perfiles de hierro plano negro (planas).',
-    category: 'malla-ciclon' as any,
+    id: 'acc-2',
+    title: 'Unión para Tubería',
+    slug: 'union-tubo',
+    description: 'Coples de unión para alinear y conectar tramos de tubos galvanizados estructurales de forma segura.',
+    category: 'accesorios',
     specifications: [
-      'Tubería: medidas 1 ¼", 1 ½" y 2"',
-      'Planas: Hierro plano negro de ¾ x 3/16'
+      'Medidas disponibles: 1 ¼", 1 ½" y 2"',
+      'Galvanizado de alta resistencia mecánica'
     ],
-    image: img(''),
+    image: img('/images/fotos/Bultos de alambre 2.jpeg'),
+    featured: false
+  },
+  {
+    id: 'acc-3',
+    title: 'Copa Doble con Abrazadera',
+    slug: 'copa-doble-abrazadera',
+    description: 'Accesorio esquinero de acoplamiento doble con abrazadera incorporada de media luna para fijar rieles superiores en postes tensores.',
+    category: 'accesorios',
+    specifications: [
+      'Facilita la instalación de marcos perimetrales firmes',
+      'Medidas estándar: para tubos de 1 ¼", 1 ½" y 2"'
+    ],
+    image: img('/images/fotos/Pedidos a medida.png'),
+    featured: false
+  },
+  {
+    id: 'acc-4',
+    title: 'Espada Sencilla con Tapón Púa de Aluminio',
+    slug: 'espada-sencilla-tapon',
+    description: 'Espada de soporte para líneas superiores de alambre de púas, equipada con tapón púa de aluminio para tubos galvanizados.',
+    category: 'accesorios',
+    specifications: [
+      'Compatible con tubos de 1 ¼", 1 ½" y 2"',
+      'Material de aluminio anticorrosivo'
+    ],
+    image: img('/images/fotos/Pedidos a medida.png'),
+    featured: false
+  },
+  {
+    id: 'acc-5',
+    title: 'Privacinta (Rollos)',
+    slug: 'privacinta-rollo',
+    description: 'Rollos de cinta plástica de privacidad para entrelazar en mallas ciclón residenciales o comerciales.',
+    category: 'accesorios',
+    specifications: [
+      'Colores disponibles: Verde, Gris y Azul',
+      'Estabilidad térmica y protección UV',
+      'Anchos estándar compatibles con mallas ciclón de 2" y 2.5"'
+    ],
+    image: img('/images/fotos/Privacinta verde 8.jpg'),
+    featured: true
+  },
+  {
+    id: 'acc-6',
+    title: 'Engrapadora Markwell y Grapas',
+    slug: 'engrapadora-markwell',
+    description: 'Herramienta profesional marca Markwell y grapas metálicas especiales para fijación rápida y segura de Privacinta en la malla.',
+    category: 'accesorios',
+    specifications: [
+      'Grapas de acero galvanizado resistentes al óxido',
+      'Aplicación rápida y acabado firme'
+    ],
+    image: img('/images/fotos/Bultos de alambre 2.jpeg'),
+    featured: false
+  },
+  // --- SEGURIDAD ---
+  {
+    id: 'prod-5',
+    title: 'Razor Ribbon (Concertina)',
+    slug: 'razor-ribbon',
+    description: 'Barrera de seguridad física disuasiva tipo concertina de cuchillas de acero galvanizado o acero inoxidable.',
+    category: 'malla-ciclon',
+    specifications: [
+      'Razor Ribbon: Diámetros de Ø 350 mm, 450 mm, 600 mm, 750 mm',
+      'Alambre de púas espigado de alta tensión superior',
+      'Cuchillas cortantes de acero inoxidable 304 o galvanizado'
+    ],
+    image: img('/images/razor_ribbon.png'),
+    featured: true
+  },
+  {
+    id: 'prod-7',
+    title: 'Tubería Estructural Galvanizada',
+    slug: 'tuberia-galvanizada',
+    description: 'Tubería redonda para postes esquineros, tensores y rieles de marcos de soporte en mallas perimetrales.',
+    category: 'malla-ciclon',
+    specifications: [
+      'Diámetros estándar: 1 ¼", 1 ½" y 2"',
+      'Chapa calibre 18 y chapa pesada',
+      'Resistente a la intemperie por baño galvanizado'
+    ],
+    image: img('/images/fotos/Bultos de alambre 2.jpeg'),
     featured: false
   },
   // --- HERRERÍA ---
@@ -131,27 +191,28 @@ const LOCAL_PRODUCTS: Product[] = [
     id: 'prod-8',
     title: 'Estructuras y Trabajos de Herrería',
     slug: 'trabajos-herreria',
-    description: 'Desarrollamos balcones, portones, barandas, toldos, casetas, estanterías, jaulas y barandales con acabados profesionales a medida.',
-    category: 'herreria' as any,
+    description: 'Desarrollamos portones, balcones, barandas, toldos, casetas y protectores de herrería profesional hechos a medida.',
+    category: 'herreria',
     specifications: [
+      'Diseño personalizado para residencias y comercios',
       'Soldadura profesional garantizada',
-      'Fabricación 100% a medida'
+      'Fabricación e instalación profesional'
     ],
-    image: img(''),
+    image: img('/images/fotos/Portones (1).jpg'),
     featured: true
   },
   // --- INSTALACIONES ---
   {
     id: 'prod-9',
-    title: 'Servicio de Instalación Integral',
+    title: 'Servicio de Instalación Profesional',
     slug: 'instalacion-integral',
-    description: 'Servicios de instalación profesional de malla galvanizada, razor, privacinta, estructuras metálicas y techos/enlaminados.',
-    category: 'instalaciones' as any,
+    description: 'Servicio completo de instalación de mallas, razor ribbon, privacinta y herrería a nivel nacional.',
+    category: 'instalaciones',
     specifications: [
-      'Supervisión de obra de principio a fin',
-      'Técnicos especialistas en cerramientos'
+      'Supervisión y control de obra en campo',
+      'Instalación firme y con garantía escrita de mano de obra'
     ],
-    image: img(''),
+    image: img('/images/fotos/_MG_3133.JPG'),
     featured: true
   }
 ];
@@ -163,11 +224,11 @@ const LOCAL_SERVICES: Service[] = [
     slug: 'venta-suministro-materiales',
     icon: 'Package',
     shortDescription: 'Materiales de alta calidad y durabilidad, garantizando resistencia y una larga vida útil.',
-    detailedDescription: 'En Inmcers S.A somos especialistas en la fabricación y comercialización de malla galvanizada, PVC, tubería y privacinta. Controlamos cada etapa del proceso para garantizar productos con altos estándares de calidad.',
+    detailedDescription: 'En Inmcers S.A fabricamos de forma directa la malla galvanizada y PVC verde, garantizando precios competitivos de fábrica. Para tuberías, accesorios y demás perfiles, dependemos de los precios del mercado para ofrecerle la mejor oferta comercial.',
     features: [
-      'Fabricación directa de malla ciclón',
+      'Fabricación directa de malla galvanizada y PVC verde',
       'Materiales de alta resistencia y durabilidad',
-      'Atención personalizada y asesoría técnica',
+      'Atención personalizada y asesoría comercial',
       'Cobertura de envíos a los 22 departamentos'
     ]
   },
@@ -187,15 +248,15 @@ const LOCAL_SERVICES: Service[] = [
   },
   {
     id: 'srv-3',
-    title: 'Excelente Servicio al Cliente',
-    slug: 'servicio-al-cliente',
+    title: 'Asesoría de Ventas',
+    slug: 'asesoria-ventas',
     icon: 'Award',
     shortDescription: 'Atención personalizada y orientación técnica en cada etapa de su proyecto.',
-    detailedDescription: 'Nuestros asesores de ventas altamente capacitados brindan atención personalizada para que usted encuentre la solución en seguridad perimetral que mejor se adapta a sus necesidades, con presupuestos claros y transparentes.',
+    detailedDescription: 'Nuestro equipo de ventas le brinda orientación técnica y comercial personalizada sobre las características de cada producto, métodos de instalación, especificaciones y la mejor solución para su proyecto con asesoría gratuita.',
     features: [
-      'Asesores expertos a su disposición',
+      'Orientación comercial y técnica personalizada',
       'Cotizaciones formales y detalladas',
-      'Respaldo de más de 30 años de experiencia',
+      'Explicación de calibres y especificaciones',
       'Compromiso, calidad y eficiencia'
     ]
   }

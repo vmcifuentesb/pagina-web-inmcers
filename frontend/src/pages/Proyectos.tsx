@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Filter, ChevronRight } from 'lucide-react';
+import { img } from '../lib/images';
 
 type Sector = 'Todos' | 'Industrial' | 'Residencial' | 'Agrícola';
 
@@ -16,51 +17,51 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Cerramiento Perimetral Planta de Producción',
+    title: 'Cercado Perimetral Comercial - Panadería Panadeli',
     sector: 'Industrial',
-    location: 'Escuintla',
-    description: 'Instalación de 800 metros lineales de malla ciclón calibre 10 con 3 líneas de Razor Ribbon superior para máxima seguridad industrial.',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=800',
+    location: 'Antigua Guatemala',
+    description: 'Instalación de malla ciclón galvanizada (HG) con postes tensores de soporte reforzados para garantizar seguridad en áreas de carga y descarga de mercadería.',
+    imageUrl: img('/images/fotos/AntiguaGuat-Panadeli6.jpeg'),
   },
   {
     id: '2',
-    title: 'Residencial Los Pinos',
-    sector: 'Residencial',
-    location: 'Carretera a El Salvador',
-    description: 'División de lotes residenciales utilizando malla forrada en PVC verde para integración paisajística y prevención de corrosión.',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
+    title: 'Cercado de Seguridad en Embajada de Brasil',
+    sector: 'Industrial',
+    location: 'Ciudad de Guatemala',
+    description: 'Instalación técnica de malla ciclón reforzada con concertina superior tipo Razor Ribbon de alta seguridad para delegación diplomática.',
+    imageUrl: img('/images/fotos/Embajada de Brasil.jpeg'),
   },
   {
     id: '3',
-    title: 'Finca Cafetalera',
-    sector: 'Agrícola',
-    location: 'Cobán',
-    description: 'Delimitación de terrenos agrícolas con malla ciclón estándar, previniendo el ingreso de fauna silvestre a áreas de cultivo.',
-    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800',
+    title: 'Malla con Privacinta Residencial',
+    sector: 'Residencial',
+    location: 'Chimaltenango',
+    description: 'Delimitación perimetral de jardines y áreas verdes utilizando malla ciclón con inserción de Privacinta verde de alta densidad para máxima discreción visual.',
+    imageUrl: img('/images/fotos/Privacinta verde 8.jpg'),
   },
   {
     id: '4',
-    title: 'Bodegas de Almacenamiento',
+    title: 'Cerramiento Estructural en Embajada de Japón',
     sector: 'Industrial',
-    location: 'Villa Nueva',
-    description: 'Cerramiento completo con muros de retención y malla galvanizada con privacinta para evitar visibilidad desde el exterior.',
-    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
+    location: 'Ciudad de Guatemala',
+    description: 'Instalación de postes tensores pesados, marcos de tubería galvanizada y malla ciclón de alta resistencia para el perímetro exterior.',
+    imageUrl: img('/images/fotos/Embajada de japon (1).jpeg'),
   },
   {
     id: '5',
-    title: 'Condominio Las Jacarandas',
-    sector: 'Residencial',
-    location: 'Zona 16, Guatemala',
-    description: 'Cerramiento perimetral del condominio utilizando paneles rígidos (Euro Reja) para un acabado estético premium.',
-    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800',
+    title: 'Cerramiento de Finca Rural',
+    sector: 'Agrícola',
+    location: 'Chimaltenango',
+    description: 'Delimitación de linderos agrícolas y de cultivo utilizando postes de concreto estructurales y malla galvanizada pesada contra la intemperie.',
+    imageUrl: img('/images/fotos/Chimaltenango10.jpeg'),
   },
   {
     id: '6',
-    title: 'Granja Avícola San Juan',
-    sector: 'Agrícola',
-    location: 'Chimaltenango',
-    description: 'Estructuras de herrería y cerramiento con malla de abertura reducida para galpones.',
-    imageUrl: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=800',
+    title: 'Residencia Campestre con Malla PVC',
+    sector: 'Residencial',
+    location: 'San Lucas Sacatepéquez',
+    description: 'Cercado perimetral de lote residencial campestre utilizando malla ciclón con recubrimiento polimérico de PVC color verde para integración paisajística.',
+    imageUrl: img('/images/fotos/Malla PVC (1).jpg'),
   }
 ];
 
@@ -121,6 +122,24 @@ export const Proyectos: React.FC = () => {
       {/* Galería Section (Light background) */}
       <section className="relative z-10 py-16 md:py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Banner de Asesoría en Proyectos */}
+          <div className="bg-white border border-primary/30 rounded-2xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+            <div className="text-left space-y-1">
+              <span className="text-[10px] font-black text-primary uppercase tracking-widest block">Línea de Proyectos</span>
+              <h3 className="text-base font-extrabold text-slate-900">¿Desea coordinar la instalación de malla perimetral?</h3>
+              <p className="text-xs text-slate-600">Comuníquese directo con nuestro departamento técnico para recibir asesoría formal inmediata.</p>
+            </div>
+            <a 
+              href="https://wa.me/50258560315?text=Hola,%20deseo%20solicitar%20asesoría%20sobre%20instalación%20de%20proyectos%20de%20malla."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-title font-black text-xs shadow-md hover:scale-[1.02] transition-all shrink-0 cursor-pointer gap-2"
+            >
+              <i className="fa-brands fa-whatsapp text-sm"></i>
+              <span>WhatsApp Proyectos: 5856 0315</span>
+            </a>
+          </div>
           
           {/* Filtros */}
           <div className="flex flex-col sm:flex-row items-center justify-between mb-12 gap-6 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">

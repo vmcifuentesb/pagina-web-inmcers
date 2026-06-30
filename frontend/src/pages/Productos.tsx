@@ -144,6 +144,10 @@ export const Productos: React.FC = () => {
                         ? 'Privacinta'
                         : product.category === 'tuberia'
                         ? 'Tubería'
+                        : product.category === 'accesorios'
+                        ? 'Accesorio'
+                        : product.category === 'instalaciones'
+                        ? 'Instalación'
                         : 'Herrería'}
                     </div>
                   </div>

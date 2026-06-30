@@ -41,6 +41,14 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
     const encodedMsg = encodeURIComponent(mensaje);
     window.open(`https://wa.me/50242120707?text=${encodedMsg}`, "_blank")
     onComplete?.()
+    
+    // Resetear al paso 1 y limpiar inputs
+    setPaso(1)
+    setSelectedProduct(null)
+    setMetros("")
+    setNombre("")
+    setTelefono("")
+    setCorreo("")
   }
 
   const puedeAvanzar = () => {

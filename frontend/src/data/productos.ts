@@ -17,25 +17,24 @@ export const productos: Producto[] = [
   {
     id: "malla-ciclon",
     nombre: "Malla Ciclón Galvanizada",
-    descripcion: "Fabricación propia en PVC y HG. Ideal para cerramientos residenciales, industriales y deportivos.",
+    descripcion: "Fabricación propia en PVC Verde y Galvanizado (HG). Ideal para cerramientos residenciales, industriales y deportivos.",
     imagen: img("/images/fotos/Malla galvanizada (1).jpg"),
     categoria: "Malla Ciclón",
-    calibres: ["2 ¾\"", "2 ½\"", "2\"", "1 ½\"", "1\"", "¾\"", "½\""],
-    alturas: ["0.6 m", "1.0 m", "1.2 m", "1.5 m", "1.8 m", "2.0 m", "2.5 m", "3.0 m"],
-    acabados: ["Galvanizado por Inmersión en Caliente (HG)", "Recubrimiento PVC (Verde, Negro, Blanco)", "Galvanizado + Pintura Electroestática"],
+    calibres: ["Calibre 11", "Calibre 12", "Calibre 12.5", "Calibre 13", "Calibre 14"],
+    alturas: ["1.0 m", "1.5 m", "2.0 m", "2.5 m", "3.0 m"],
+    acabados: ["Galvanizado por Inmersión en Caliente (HG)", "Recubrimiento PVC (Verde únicamente)"],
     usos: ["Cerramientos residenciales", "Canchas deportivas", "Perímetros industriales", "Colegios y parques"],
     especificaciones: [
-      "Medidas de cuadro: 2 ¾\", 2 ½\", 2\", 1 ½\", 1\", ¾\", ½\"",
-      "Disponible en PVC y Galvanizado (HG)",
-      "Fabricación propia",
-      "Alta durabilidad y resistencia"
+      "Disponible en PVC Verde y Galvanizado (HG)",
+      "Fabricación propia en planta",
+      "Alta durabilidad y resistencia a la intemperie"
     ]
   },
   {
     id: "razor-ribbon",
     nombre: "Razor Ribbon",
-    descripcion: "Alambre de púas de alta seguridad ideal para perímetros críticos. Disponible en galvanzado y acero inoxidable.",
-    imagen: img("/images/fotos/Alambre espigado (1).jpg"),
+    descripcion: "Alambre de cuchillas de alta seguridad ideal para perímetros críticos. Disponible en galvanizado y acero inoxidable.",
+    imagen: img("/images/razor_ribbon.png"),
     categoria: "Seguridad",
     calibres: ["Tipo Concertina (espiral)", "Tipo Plano (Flat Wrap)", "Tipo Cruceta (Cross)"],
     alturas: ["3 anillas (Ø 350 mm)", "4 anillas (Ø 450 mm)", "5 anillas (Ø 600 mm)", "6 anillas (Ø 750 mm)"],
@@ -51,17 +50,17 @@ export const productos: Producto[] = [
   {
     id: "privacinta",
     nombre: "Privacinta",
-    descripcion: "Cinta plástica de privacidad para mallas en varios colores y medidas. Protección UV incluida.",
+    descripcion: "Cinta plástica de privacidad para mallas ciclón. Tejido de alta densidad para máxima discreción.",
     imagen: img("/images/fotos/Privacinta verde3.jpg"),
     categoria: "Accesorios",
     calibres: ["2 ¾\"", "2 ½\"", "2\"", "1\"", "½\""],
-    acabados: ["Verde", "Negro", "Blanco", "Azul", "Rojo", "Marrón"],
+    acabados: ["Verde", "Gris", "Azul"],
     usos: ["Privacidad residencial", "Cerramientos de colegios", "Canchas deportivas", "Áreas recreativas"],
     especificaciones: [
       "Medidas: 2 ¾\", 2 ½\", 2\", 1\", ½\"",
-      "Varios colores disponibles",
-      "Protección UV",
-      "Fácil instalación"
+      "Colores disponibles: Verde, Gris y Azul",
+      "Protección contra rayos UV",
+      "Fácil entrelazado en malla"
     ]
   },
   {

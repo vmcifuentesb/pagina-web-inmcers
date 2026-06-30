@@ -32,12 +32,12 @@ export const Nosotros: React.FC = () => {
     {
       icon: <Users className="w-6 h-6 text-primary" />,
       title: 'Equipo Experto y Calificado',
-      desc: 'Desde ingenieros y soldadores hasta asesores y supervisores rigurosos enfocados en brindar el mejor acabado.'
+      desc: 'Contamos con un equipo de soldadores, herreros, operadores, instaladores, personal especializado en proyectos, asesores de ventas que brindan asesoría gratuita y supervisores comprometidos con la calidad.'
     },
     {
       icon: <Shield className="w-6 h-6 text-primary" />,
-      title: 'Garantía Escrita Total',
-      desc: 'Todas nuestras instalaciones y productos cuentan con un respaldo documentado de resistencia a la intemperie.'
+      title: 'Garantía de Nuestro Trabajo',
+      desc: 'Brindamos garantía en cada uno de los proyectos realizados, asegurando resistencia y un servicio confiable.'
     },
     {
       icon: <HardHat className="w-6 h-6 text-primary" />,
@@ -48,24 +48,24 @@ export const Nosotros: React.FC = () => {
 
   const timelineMilestones = [
     {
-      year: '1994',
-      title: 'Fundación y Primeros Pasos',
-      desc: 'Iniciamos operaciones en Guatemala, especializándonos desde el primer día en la fabricación de malla ciclón con estándares de alta calidad para el sector residencial e industrial.'
-    },
-    {
-      year: '2005',
-      title: 'Ampliación de Planta y Maquinaria',
-      desc: 'Adquirimos tejedoras automáticas de última generación para aumentar la velocidad de producción y ofrecer malla ciclón PVC y galvanizada a medida.'
+      year: '2003',
+      title: 'Un nuevo espacio para seguir creciendo',
+      desc: 'Ampliamos nuestras instalaciones para aumentar nuestra capacidad de producción y almacenamiento, reafirmando nuestro compromiso con la calidad, la disponibilidad y el servicio.'
     },
     {
       year: '2010',
-      title: 'Distribución y Cobertura Nacional',
-      desc: 'Establecimos canales de distribución propia para Razor Ribbon, Privacinta y sistemas de seguridad perimetral para cubrir los 22 departamentos del país.'
+      title: 'Expansión para servir mejor',
+      desc: 'Continuamos creciendo con la ampliación de nuestro equipo de trabajo y del área de taller, fortaleciendo nuestra infraestructura para ofrecer un servicio más eficiente y atender las necesidades de nuestros clientes con mayor capacidad.'
     },
     {
-      year: 'Presente',
-      title: 'Líderes en Cerramientos Perimetrales',
-      desc: 'Con más de 30 años de experiencia, nos consolidamos como la principal fábrica de malla ciclón y aliados estratégicos en proyectos llave con instalación de malla a nivel nacional.'
+      year: '2024',
+      title: 'Automatización para seguir creciendo',
+      desc: 'Dimos inicio al proceso de automatización de nuestra fabricación de malla galvanizada, modernizando nuestros procesos para aumentar la capacidad y velocidad de producción, manteniendo los más altos estándares de calidad y reforzando nuestro compromiso con el cumplimiento oportuno de cada entrega.'
+    },
+    {
+      year: '2026',
+      title: 'Mirando hacia el futuro',
+      desc: 'Hoy seguimos creciendo con una visión de mejora continua, invirtiendo en tecnología, optimizando nuestros procesos y fortaleciendo a nuestro equipo humano para ofrecer productos de la más alta calidad, cumplir con los tiempos de entrega y brindar un servicio que inspire confianza y satisfacción en cada cliente.'
     }
   ];
 
@@ -111,10 +111,10 @@ export const Nosotros: React.FC = () => {
             <div className="w-12 h-1 bg-primary rounded-full"></div>
             
             <p className="font-body text-slate-650 text-base leading-relaxed">
-              En **Inmcers S.A** entendemos que la seguridad perimetral no admite fallas. Por ello, controlamos minuciosamente cada etapa de la producción en nuestra planta. Tejemos nuestra propia **malla ciclón galvanizada y PVC** en múltiples aberturas y calibres, adaptándola perfectamente a cada proyecto.
+              En <strong>Inmcers S.A</strong> entendemos que la seguridad perimetral no admite fallas. Por ello, controlamos minuciosamente cada etapa de la producción en nuestra planta. Tejemos nuestra propia <strong>malla ciclón galvanizada y PVC</strong> en múltiples aberturas y calibres, adaptándola perfectamente a cada proyecto.
             </p>
             <p className="font-body text-slate-650 text-base leading-relaxed">
-              Ofrecemos soluciones avanzadas e **instalación de malla** para todo tipo de terrenos, brindando asesoría experta y entregas puntuales, lo que nos ha permitido mantener la preferencia del mercado durante 3 décadas en los 22 departamentos de Guatemala.
+              Ofrecemos soluciones avanzadas e <strong>instalación de malla</strong> diseñadas a la medida para sectores clave: <strong>Residencial, Comercial e Industrial</strong>. Brindamos asesoría experta y entregas puntuales en todo tipo de terrenos, lo que nos ha permitido mantener la preferencia del mercado durante más de 20 años en los 22 departamentos de Guatemala.
             </p>
 
             <div className="border-l-4 border-primary bg-white p-6 rounded-r-2xl border-t border-b border-r border-slate-200 shadow-sm">
@@ -192,7 +192,7 @@ export const Nosotros: React.FC = () => {
               Capacidad Técnica e Industrial
             </h2>
             <p className="font-body text-slate-600 text-sm mt-3 leading-relaxed">
-              Disponemos de la infraestructura física, transporte y soldadores profesionales para garantizar una correcta ejecución perimetral.
+              Disponemos de infraestructura física, transporte y personal calificado para garantizar una correcta ejecución perimetral.
             </p>
           </div>
 

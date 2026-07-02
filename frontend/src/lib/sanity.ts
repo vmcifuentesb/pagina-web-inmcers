@@ -60,7 +60,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Mayor durabilidad en climas húmedos y zonas costeras',
       'Calibres reforzados para mayor firmeza'
     ],
-    image: img('/images/fotos/Malla PVC (1).jpg'),
+    image: img('/images/catalogo/Malla PVC.jpg'),
     featured: true
   },
   {
@@ -74,7 +74,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Bloqueo visual óptimo para residencias y colegios',
       'Material con protección UV para evitar decoloración'
     ],
-    image: img('/images/fotos/Instalación Privacinta.jpeg'),
+    image: img('/images/catalogo/Malla PVCcon privacinta (1).JPG'),
     featured: true
   },
   // --- ACCESORIOS ---
@@ -88,7 +88,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Para tubos de diámetros de 1 ¼", 1 ½" y 2"',
       'Material termoplástico resistente a la intemperie'
     ],
-    image: img('/images/fotos/Pedidos a medida.png'),
+    image: img('/images/catalogo/Tapón de púa.jpg'),
     featured: false
   },
   {
@@ -101,7 +101,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Medidas disponibles: 1 ¼", 1 ½" y 2"',
       'Galvanizado de alta resistencia mecánica'
     ],
-    image: img('/images/fotos/Bultos de alambre 2.jpeg'),
+    image: img('/images/catalogo/Codo.JPG'),
     featured: false
   },
   {
@@ -114,7 +114,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Facilita la instalación de marcos perimetrales firmes',
       'Medidas estándar: para tubos de 1 ¼", 1 ½" y 2"'
     ],
-    image: img('/images/fotos/Pedidos a medida.png'),
+    image: img('/images/catalogo/Copa con abrazadera.JPG'),
     featured: false
   },
   {
@@ -127,7 +127,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Compatible con tubos de 1 ¼", 1 ½" y 2"',
       'Material de aluminio anticorrosivo'
     ],
-    image: img('/images/fotos/Pedidos a medida.png'),
+    image: img('/images/catalogo/Espada sencilla.jpg'),
     featured: false
   },
   {
@@ -141,7 +141,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Estabilidad térmica y protección UV',
       'Anchos estándar compatibles con mallas ciclón de 2" y 2.5"'
     ],
-    image: img('/images/fotos/Privacinta verde 8.jpg'),
+    image: img('/images/catalogo/Privacinta verde.JPG'),
     featured: true
   },
   {
@@ -154,7 +154,7 @@ const LOCAL_PRODUCTS: Product[] = [
       'Grapas de acero galvanizado resistentes al óxido',
       'Aplicación rápida y acabado firme'
     ],
-    image: img('/images/fotos/Bultos de alambre 2.jpeg'),
+    image: img('/images/catalogo/Engrapadora y grapas (1).jpg'),
     featured: false
   },
   // --- SEGURIDAD ---
@@ -234,7 +234,7 @@ const LOCAL_SERVICES: Service[] = [
   },
   {
     id: 'srv-2',
-    title: 'Instalación y Proyectos Llave en Mano',
+    title: 'Instalación y Proyectos de Cerramiento',
     slug: 'proyectos-llave-en-mano',
     icon: 'Shield',
     shortDescription: 'Puntualidad en cada entrega e instalación, cumpliendo con los tiempos acordados.',
@@ -252,7 +252,7 @@ const LOCAL_SERVICES: Service[] = [
     slug: 'asesoria-ventas',
     icon: 'Award',
     shortDescription: 'Atención personalizada y orientación técnica en cada etapa de su proyecto.',
-    detailedDescription: 'Nuestro equipo de ventas le brinda orientación técnica y comercial personalizada sobre las características de cada producto, métodos de instalación, especificaciones y la mejor solución para su proyecto con asesoría gratuita.',
+    detailedDescription: 'Asesoría comercial y técnica personalizada. Nuestro equipo de ventas le brinda orientación sobre las características de cada producto, métodos de instalación, especificaciones técnicas y la mejor solución para las necesidades de su proyecto.',
     features: [
       'Orientación comercial y técnica personalizada',
       'Cotizaciones formales y detalladas',

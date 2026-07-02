@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Shield, Users, Globe, HardHat } from 'lucide-react';
 import { SEOHead } from '../components/ui/SEOHead';
 
@@ -11,6 +11,7 @@ export const Nosotros: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const [activeMilestone, setActiveMilestone] = useState(0);
 
   // Hooks de Revelado al Scroll
   const [identityRef, identityVisible] = useScrollReveal();
@@ -48,9 +49,19 @@ export const Nosotros: React.FC = () => {
 
   const timelineMilestones = [
     {
+      year: '1994',
+      title: 'Fundación e Inicios',
+      desc: 'Iniciamos operaciones en Guatemala, especializándonos desde el primer día en la fabricación de malla ciclón con estándares de alta calidad para los sectores residencial, comercial e industrial.'
+    },
+    {
       year: '2003',
       title: 'Un nuevo espacio para seguir creciendo',
       desc: 'Ampliamos nuestras instalaciones para aumentar nuestra capacidad de producción y almacenamiento, reafirmando nuestro compromiso con la calidad, la disponibilidad y el servicio.'
+    },
+    {
+      year: '2005',
+      title: 'Ampliación de planta',
+      desc: 'Adquirimos tejedoras automáticas de última generación para aumentar la velocidad de producción y ofrecer malla ciclón PVC y galvanizada a medida.'
     },
     {
       year: '2010',
@@ -70,7 +81,7 @@ export const Nosotros: React.FC = () => {
   ];
 
   return (
-    <div ref={containerRef} className="pt-20 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
+    <div ref={containerRef} className="bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-[0.01] z-0"></div>
       <SEOHead
         title="Más de 30 Años de Experiencia en Cerramientos Perimetrales"
@@ -78,24 +89,24 @@ export const Nosotros: React.FC = () => {
       />
       
       {/* Encabezado Principal (Dark style for premium identity transition) */}
-      <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 overflow-hidden z-10 text-center">
+      <section className="relative bg-secondary pt-36 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#152b47]/30 overflow-hidden z-10 text-center">
         {/* Luces radiales de fondo */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-radial-glow rounded-full blur-3xl opacity-60"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-radial-glow-accent rounded-full blur-3xl opacity-40"></div>
         
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest">Nuestra Trayectoria</span>
+          <span className="text-xs font-bold text-primary-light uppercase tracking-widest block font-black">Nuestra Trayectoria</span>
           <h1 
             ref={titleRef} 
             className="text-4xl font-title font-extrabold !text-white tracking-tight sm:text-5xl"
           >
-            Sobre <span className="text-gradient-primary">Inmcers S.A</span>
+            Sobre <span className="bg-gradient-to-r from-primary-light to-emerald-400 bg-clip-text text-transparent font-black">Inmcers S.A</span>
           </h1>
           <p 
             ref={subtitleRef} 
-            className="text-lg text-slate-350 font-body max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed"
           >
-            Con <strong>más de 30 años de experiencia</strong> en el mercado, somos una empresa líder especializada en la <strong>fabricación de malla ciclón</strong>, comercialización de materiales de alta calidad y la ejecución de <strong>cerramientos perimetrales y sistemas de seguridad</strong> a nivel nacional.
+            Con <strong className="text-white font-extrabold">más de 30 años de experiencia</strong> en el mercado, somos una empresa líder especializada en la <strong className="text-white font-extrabold">fabricación de malla ciclón</strong>, comercialización de materiales de alta calidad y la ejecución de <strong className="text-white font-extrabold">cerramientos perimetrales y sistemas de seguridad</strong> a nivel nacional.
           </p>
         </div>
       </section>
@@ -110,10 +121,10 @@ export const Nosotros: React.FC = () => {
             </h2>
             <div className="w-12 h-1 bg-primary rounded-full"></div>
             
-            <p className="font-body text-slate-650 text-base leading-relaxed">
+            <p className="font-body text-slate-600 text-base leading-relaxed">
               En <strong>Inmcers S.A</strong> entendemos que la seguridad perimetral no admite fallas. Por ello, controlamos minuciosamente cada etapa de la producción en nuestra planta. Tejemos nuestra propia <strong>malla ciclón galvanizada y PVC</strong> en múltiples aberturas y calibres, adaptándola perfectamente a cada proyecto.
             </p>
-            <p className="font-body text-slate-650 text-base leading-relaxed">
+            <p className="font-body text-slate-600 text-base leading-relaxed">
               Ofrecemos soluciones avanzadas e <strong>instalación de malla</strong> diseñadas a la medida para sectores clave: <strong>Residencial, Comercial e Industrial</strong>. Brindamos asesoría experta y entregas puntuales en todo tipo de terrenos, lo que nos ha permitido mantener la preferencia del mercado durante más de 20 años en los 22 departamentos de Guatemala.
             </p>
 
@@ -143,40 +154,45 @@ export const Nosotros: React.FC = () => {
       <section ref={timelineRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-100/50 border-t border-b border-slate-200/60 relative z-10">
         <div className="max-w-5xl mx-auto">
           
-          <div className={`text-center max-w-2xl mx-auto mb-20 transition-all duration-700 ease-out ${timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ease-out ${timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span className="text-xs font-bold text-primary uppercase tracking-widest">Nuestra Historia</span>
             <h2 className="text-3xl font-title font-extrabold text-slate-900 mt-3">Hitos del Crecimiento</h2>
             <div className="w-12 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
           </div>
 
-          {/* Línea de tiempo vertical */}
-          <div className="relative max-w-4xl mx-auto timeline-container">
-            {/* The line */}
-            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-slate-200 transform md:-translate-x-1/2"></div>
-            
+          {/* Selector de Años Interactivo */}
+          <div className={`relative max-w-3xl mx-auto mb-10 overflow-x-auto scrollbar-none flex justify-start md:justify-center gap-3 px-4 py-2 transition-all duration-700 ease-out ${timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {timelineMilestones.map((m, idx) => (
-              <div 
-                key={idx} 
-                className={`timeline-item mb-16 relative flex flex-col md:flex-row items-center w-full transition-all duration-700 ease-out transform ${
-                  timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                } ${
-                  idx % 2 === 0 ? 'md:flex-row-reverse' : ''
+              <button
+                key={m.year}
+                onClick={() => setActiveMilestone(idx)}
+                className={`cursor-pointer px-5 py-3 rounded-2xl font-title font-extrabold text-sm sm:text-base border-2 transition-all shrink-0 ${
+                  activeMilestone === idx
+                    ? 'bg-primary border-primary text-white shadow-md scale-105'
+                    : 'bg-white border-slate-200 text-slate-500 hover:border-primary/50 hover:text-slate-900'
                 }`}
-                style={{ transitionDelay: `${idx * 150}ms` }}
               >
-                {/* Punto indicador */}
-                <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-primary border-[3px] border-white rounded-full z-10 transform -translate-x-1/2 shadow-sm"></div>
-                
-                {/* Contenido (Tarjeta) */}
-                <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
-                  <div className="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:border-primary/50 transition-all group relative overflow-hidden">
-                    <span className="text-3xl font-title font-extrabold text-primary mb-3 block group-hover:scale-105 transform origin-left transition-transform">{m.year}</span>
-                    <h3 className="font-title font-extrabold text-lg text-slate-900 mb-3 relative z-10">{m.title}</h3>
-                    <p className="font-body text-sm text-slate-600 leading-relaxed relative z-10">{m.desc}</p>
-                  </div>
-                </div>
-              </div>
+                {m.year}
+              </button>
             ))}
+          </div>
+
+          {/* Hito Activo - Detalle */}
+          <div className={`relative max-w-2xl mx-auto transition-all duration-500 ease-out transform ${timelineVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            <div className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-md relative overflow-hidden text-center min-h-[220px] flex flex-col justify-center items-center">
+              {/* Accent de fondo */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+              
+              <span className="text-5xl sm:text-6xl font-title font-black text-primary/10 tracking-widest block mb-1">
+                {timelineMilestones[activeMilestone].year}
+              </span>
+              <h3 className="font-title font-extrabold text-xl text-slate-900 mb-4">
+                {timelineMilestones[activeMilestone].title}
+              </h3>
+              <p className="font-body text-slate-600 text-sm sm:text-base leading-relaxed max-w-md">
+                {timelineMilestones[activeMilestone].desc}
+              </p>
+            </div>
           </div>
 
         </div>
@@ -192,7 +208,7 @@ export const Nosotros: React.FC = () => {
               Capacidad Técnica e Industrial
             </h2>
             <p className="font-body text-slate-600 text-sm mt-3 leading-relaxed">
-              Disponemos de infraestructura física, transporte y personal calificado para garantizar una correcta ejecución perimetral.
+              Disponemos de infraestructura física, transporte y personal calificado para garantizar el éxito, seguridad y cumplimiento en cada obra.
             </p>
           </div>
 
@@ -229,7 +245,7 @@ export const Nosotros: React.FC = () => {
               Logística y Envío Nacional
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
-            <p className="font-body text-slate-650 text-base leading-relaxed">
+            <p className="font-body text-slate-600 text-base leading-relaxed">
               Llegamos a cualquier punto de los 22 departamentos de la República. Contamos con transporte propio de fábrica para despachar mallas y estructuras hacia el <strong>Occidente, Región Sur y Suroccidente, Área Central, Norte y Costa Oriente</strong>, asegurando entregas eficientes sin importar la ubicación de su proyecto.
             </p>
           </div>

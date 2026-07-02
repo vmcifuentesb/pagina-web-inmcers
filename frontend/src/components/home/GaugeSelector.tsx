@@ -10,29 +10,36 @@ interface GaugeConfig {
 }
 
 export const GaugeSelector: React.FC = () => {
-  const [selectedGauge, setSelectedGauge] = useState<string>("Calibre 9");
+  const [selectedGauge, setSelectedGauge] = useState<string>("Calibre 12");
 
   const gauges: GaugeConfig[] = [
     { 
-      name: "Calibre 9", 
-      thickness: "3.76 mm", 
-      strength: "Ultra Pesada (Máxima)", 
-      useCase: "Cercados industriales, prisiones, bodegas de alto valor y predios de alta seguridad estatal.", 
-      stroke: 10 
+      name: "Calibre 13.5", 
+      thickness: "2.03 mm", 
+      strength: "Ligera / Residencial", 
+      useCase: "Cercados residenciales, áreas escolares y cerramientos domésticos que requieren economía y funcionalidad.", 
+      stroke: 3.5 
     },
     { 
-      name: "Calibre 11", 
-      thickness: "3.05 mm", 
-      strength: "Estándar Reforzada", 
-      useCase: "Cercado de condominios residenciales, colegios, canchas deportivas y perímetros comerciales.", 
-      stroke: 7 
+      name: "Calibre 13", 
+      thickness: "2.18 mm", 
+      strength: "Económica", 
+      useCase: "Divisiones internas de parcelas, delimitaciones domésticas y proyectos de cercado urbano.", 
+      stroke: 4.5 
     },
     { 
-      name: "Calibre 12.5", 
-      thickness: "2.51 mm", 
-      strength: "Económica / Agrícola", 
-      useCase: "Divisiones internas en parcelas, delimitaciones de fincas agrícolas y residencias con bajo nivel de riesgo.", 
-      stroke: 4 
+      name: "Calibre 12", 
+      thickness: "2.68 mm", 
+      strength: "Estándar / Comercial", 
+      useCase: "Canchas deportivas, perímetros comerciales, colegios e instalaciones de mediana seguridad.", 
+      stroke: 6.5 
+    },
+    { 
+      name: "Calibre 10", 
+      thickness: "3.40 mm", 
+      strength: "Pesada / Industrial", 
+      useCase: "Cercados industriales, bodegas de almacenamiento, zonas aduaneras y predios de alta seguridad.", 
+      stroke: 9.0 
     }
   ];
 
@@ -70,16 +77,16 @@ export const GaugeSelector: React.FC = () => {
         <div className="space-y-3 text-xs flex-grow">
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider">Espesor Real:</span>
+              <span className="block text-[11px] text-slate-400 uppercase font-black tracking-wider">Espesor Real:</span>
               <span className="font-extrabold text-slate-800">{current.thickness}</span>
             </div>
             <div>
-              <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider">Fuerza Estructural:</span>
+              <span className="block text-[11px] text-slate-400 uppercase font-black tracking-wider">Fuerza Estructural:</span>
               <span className="font-extrabold text-slate-800">{current.strength}</span>
             </div>
           </div>
           <div className="pt-2 border-t border-slate-200/50">
-            <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider mb-0.5">Uso Recomendado:</span>
+            <span className="block text-[11px] text-slate-400 uppercase font-black tracking-wider mb-0.5">Uso Recomendado:</span>
             <p className="text-xs text-slate-600 leading-normal flex items-start gap-1">
               <Eye className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
               <span>{current.useCase}</span>

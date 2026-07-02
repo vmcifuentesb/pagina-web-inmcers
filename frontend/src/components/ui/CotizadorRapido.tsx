@@ -90,8 +90,8 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
         {paso === 1 && (
           <div>
             <h3 className="text-base font-black mb-1">¿Qué producto necesitas?</h3>
-            <p className="text-[11px] text-slate-450 mb-4">Selecciona el tipo de producto para tu proyecto</p>
-            <div className="grid grid-cols-2 gap-2 max-h-[200px] overflow-y-auto pr-1">
+            <p className="text-xs text-slate-500 mb-4">Selecciona el tipo de producto para tu proyecto</p>
+            <div className="grid grid-cols-2 gap-2">
               {productos.map((p) => (
                 <button
                   key={p.id}
@@ -102,7 +102,7 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
                       : "border-slate-200 bg-white text-slate-700 hover:border-primary/50"
                   }`}
                 >
-                  <span className="block text-[9px] font-black text-accent mb-0.5 uppercase tracking-wider">{p.categoria}</span>
+                  <span className="block text-[11px] font-black text-accent mb-0.5 uppercase tracking-wider">{p.categoria}</span>
                   <span className="block text-xs font-bold leading-tight">{p.nombre}</span>
                 </button>
               ))}
@@ -113,10 +113,10 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
         {paso === 2 && (
           <div className="space-y-4">
             <h3 className="text-base font-black mb-1">Medidas de tu proyecto</h3>
-            <p className="text-[11px] text-slate-450 mb-4">Ingresa las dimensiones del área a cerrar</p>
+            <p className="text-xs text-slate-500 mb-4">Ingresa las dimensiones del área a cerrar</p>
             <div className="space-y-3 text-xs">
               <div>
-                <label className="block text-[11px] font-bold text-slate-650 mb-1">Metros lineales del perímetro *</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1">Metros lineales del perímetro *</label>
                 <input
                   type="number"
                   required
@@ -128,7 +128,7 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-650 mb-1">Altura de la malla</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1">Altura de la malla</label>
                 <select
                   value={altura}
                   onChange={(e) => setAltura(e.target.value)}
@@ -154,10 +154,10 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
         {paso === 3 && (
           <div className="space-y-4">
             <h3 className="text-base font-black mb-1">Tus datos de contacto</h3>
-            <p className="text-[11px] text-slate-450 mb-4">Recibirás tu cotización por WhatsApp</p>
+            <p className="text-xs text-slate-500 mb-4">Recibirás tu cotización por WhatsApp</p>
             <div className="space-y-3 text-xs">
               <div>
-                <label className="block text-[11px] font-bold text-slate-650 mb-1">Nombre completo *</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1">Nombre completo *</label>
                 <input
                   type="text"
                   required
@@ -168,7 +168,7 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-650 mb-1">Teléfono (WhatsApp) *</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1">Teléfono (WhatsApp) *</label>
                 <input
                   type="tel"
                   required
@@ -179,7 +179,7 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-bold text-slate-650 mb-1">Correo electrónico</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1">Correo electrónico</label>
                 <input
                   type="email"
                   value={correo}
@@ -196,7 +196,7 @@ export function CotizadorRapido({ onComplete }: CotizadorProps) {
           {paso > 1 ? (
             <button
               onClick={() => setPaso(paso - 1)}
-              className="flex items-center gap-1 text-xs font-bold text-slate-450 hover:text-slate-700:text-slate-200 transition-colors cursor-pointer"
+              className="flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-700:text-slate-200 transition-colors cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" /> Anterior
             </button>

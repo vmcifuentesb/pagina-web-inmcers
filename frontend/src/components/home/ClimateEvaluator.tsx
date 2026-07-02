@@ -24,22 +24,22 @@ export const ClimateEvaluator: React.FC = () => {
       name: "Escuintla", 
       zone: "Costera / Salina", 
       moisture: "Muy Alta", 
-      recommended: "Malla Recubierta en PVC (Verde, Gris o Azul)", 
-      desc: "La cercanía al mar y la alta temperatura aceleran la oxidación. El forro plástico de PVC es obligatorio para blindar el acero contra la brisa salina." 
+      recommended: "Malla Recubierta en PVC Verde", 
+      desc: "La cercanía al mar y la alta temperatura aceleran la oxidación. El recubrimiento de PVC Verde es ideal para blindar el acero contra la brisa salina." 
     },
     { 
       name: "Izabal", 
       zone: "Cálida / Marítima", 
       moisture: "Extrema", 
-      recommended: "Malla Recubierta en PVC + Razor Inoxidable", 
-      desc: "Clima tropical lluvioso constante con sales marinas. La combinación de malla recubierta de PVC y concertina de acero inoxidable es el estándar industrial definitivo." 
+      recommended: "Malla Recubierta en PVC Verde + Razor Inoxidable", 
+      desc: "Clima tropical lluvioso constante con sales marinas. La combinación de malla recubierta de PVC Verde y concertina de acero inoxidable es el estándar industrial definitivo." 
     },
     { 
       name: "Quetzaltenango", 
       zone: "Fría / Montaña", 
       moisture: "Baja a Moderada", 
-      recommended: "Malla Galvanizada HG o PVC Gris", 
-      desc: "Baja salinidad ambiental. La Malla Galvanizada HG tiene un comportamiento excelente. El PVC Gris se integra muy bien estéticamente con el clima frío." 
+      recommended: "Malla Galvanizada HG (opcional con Privacinta Gris)", 
+      desc: "Baja salinidad ambiental. La Malla Galvanizada HG tiene un comportamiento excelente. Se puede entrelazar Privacinta Gris para mejorar la privacidad." 
     },
     { 
       name: "Petén", 
@@ -59,37 +59,37 @@ export const ClimateEvaluator: React.FC = () => {
           <button
             key={d.name}
             onClick={() => setSelectedDept(d.name)}
-            className={`px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition-all duration-200 ${
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition-all duration-250 cursor-pointer ${
               selectedDept === d.name 
-                ? 'bg-secondary border-secondary text-white shadow-md' 
-                : 'bg-slate-50 border-slate-200 text-slate-600 hover:border-primary/50'
+                ? 'bg-primary border-primary text-white shadow-md font-black' 
+                : 'bg-secondary border-secondary-light/50 text-slate-350 hover:border-primary/50 hover:bg-secondary-hover/50'
             }`}
           >
             {d.name}
           </button>
         ))}
       </div>
-
-      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-4 shadow-inner">
+ 
+      <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-4 shadow-inner text-left">
         <div className="grid grid-cols-2 gap-4 text-xs">
           <div>
-            <span className="block text-[10px] text-slate-450 uppercase font-black tracking-wider mb-1">Zona Climática:</span>
+            <span className="block text-xs text-slate-500 uppercase font-black tracking-wider mb-1">Zona Climática:</span>
             <span className="font-extrabold text-slate-800 flex items-center gap-1.5">
               <Compass className="w-3.5 h-3.5 text-primary" />
               {current.zone}
             </span>
           </div>
           <div>
-            <span className="block text-[10px] text-slate-450 uppercase font-black tracking-wider mb-1">Nivel de Humedad:</span>
+            <span className="block text-xs text-slate-500 uppercase font-black tracking-wider mb-1">Nivel de Humedad:</span>
             <span className="font-extrabold text-slate-800 flex items-center gap-1.5">
               <CloudRain className="w-3.5 h-3.5 text-primary animate-bounce" />
               {current.moisture}
             </span>
           </div>
         </div>
-
+ 
         <div className="pt-4 border-t border-slate-200/50 space-y-1.5">
-          <span className="block text-[10px] text-accent uppercase font-black tracking-wider flex items-center gap-1">
+          <span className="block text-xs text-accent uppercase font-black tracking-wider flex items-center gap-1">
             <ShieldCheck className="w-3.5 h-3.5 text-accent" />
             Especificación Recomendada:
           </span>
@@ -97,6 +97,11 @@ export const ClimateEvaluator: React.FC = () => {
           <p className="text-xs text-slate-500 leading-relaxed">{current.desc}</p>
         </div>
       </div>
+
+      {/* Fuente de la información de clima y corrosión */}
+      <p className="text-[10px] text-slate-400 font-medium italic mt-2 text-center leading-normal">
+        * Fuente de datos: Basado en las clasificaciones climáticas del INSIVUMEH y las tasas de corrosión de recubrimientos de zinc (Normas ISO 9223) para regiones de Guatemala.
+      </p>
     </div>
   );
 };

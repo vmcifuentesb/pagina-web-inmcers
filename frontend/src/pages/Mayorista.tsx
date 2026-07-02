@@ -17,15 +17,15 @@ export function Mayorista() {
         description="Distribuidor mayorista de malla ciclón, tubería y cercas en Guatemala. Precios de fábrica para ferreterías, constructoras y distribuidores."
       />
       {/* Encabezado (Dark Theme for high impact) */}
-      <div className="bg-secondary text-white py-20 border-b border-secondary-light/30 relative overflow-hidden">
+      <div className="bg-secondary text-white pt-32 pb-28 border-b border-[#152b47]/30 relative overflow-hidden">
         {/* Glows de fondo */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-radial-glow rounded-full blur-3xl opacity-60"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-radial-glow-accent rounded-full blur-3xl opacity-40"></div>
 
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <Building size={48} className="text-primary mx-auto mb-4" />
+          <Building size={48} className="text-primary-light mx-auto mb-4" />
           <h1 className="text-4xl sm:text-5xl font-title font-black !text-white mb-4">Distribuidor Mayorista</h1>
-          <p className="text-lg text-slate-350 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Precios directos de fábrica para ferreterías, constructoras y distribuidores en todo Guatemala.
           </p>
         </div>
@@ -46,8 +46,8 @@ export function Mayorista() {
                 { icon: <Shield size={36} />, title: "Fabricación Propia", desc: "Producimos nuestra propia malla ciclón, garantizando calidad consistente y disponibilidad permanente de inventario." },
                 { icon: <Package size={36} />, title: "Stock Permanente", desc: "Contamos con inventario amplio de malla ciclón, tubería, privacinta y accesorios para entregas inmediatas." },
                 { icon: <Truck size={36} />, title: "Cobertura Nacional", desc: "Realizamos entregas en los 22 departamentos de Guatemala con flota de distribución propia de fábrica." },
-                { icon: <TrendingDown size={36} />, title: "Precios Sin Intermediarios", desc: "Al ser fabricantes directos, ofrecemos tarifas preferenciales de distribuidor. Solicite nuestra lista oficial." },
-                { icon: <Users size={36} />, title: "Asesoría de Ventas", desc: "Capacitación y soporte comercial para su equipo de ventas. Le ayudamos a impulsar el crecimiento de su negocio." },
+                { icon: <TrendingDown size={36} />, title: "Precios Sin Intermediarios", desc: "Al ser fabricantes directos de malla galvanizada, ofrecemos tarifas preferenciales de fábrica en este producto. En accesorios y demás materiales dependemos de los precios del mercado." },
+                { icon: <Users size={36} />, title: "Asesoría de Ventas", desc: "Nuestro equipo de ventas le brinda orientación comercial y técnica personalizada sobre las características de cada producto, métodos de instalación, especificaciones técnicas y la mejor solución para las necesidades de su proyecto." },
                 { icon: <Phone size={36} />, title: "Atención Especializada", desc: "Línea directa para mayoristas con un ejecutivo de cuenta asignado para agilizar la cotización y despacho." },
               ].map((v) => (
                 <StaggerItem key={v.title}>
@@ -64,7 +64,7 @@ export function Mayorista() {
       </section>
 
       {/* Sección 2 (Dark/Blue Section for visual transition) */}
-      <section className="py-20 bg-secondary text-white border-b border-secondary-light/30">
+      <section className="py-20 bg-secondary text-white border-b border-[#152b47]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold text-primary uppercase tracking-widest">Sistemas Disponibles</span>
@@ -75,10 +75,10 @@ export function Mayorista() {
           <StaggerContainer>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { nombre: "Malla Ciclón", desc: "Galvanizada y forrada en PVC, calibres 10, 11 y 12.5, en todas las aberturas." },
+                { nombre: "Malla Ciclón", desc: "Galvanizada y forrada en PVC Verde, calibres 10, 12, 13 y 13.5, en todas las aberturas." },
                 { nombre: "Tubería Galvanizada", desc: "Diámetros industriales de 1 ¼\" a 2\", largos de 3 a 6 metros." },
                 { nombre: "Razor Ribbon", desc: "Concertina galvanizada o de acero inoxidable en diámetros de 18\" y 24\"." },
-                { nombre: "Privacinta", desc: "Rollos de cinta de privacidad de alta densidad en verde, café, gris, negro y blanco." },
+                { nombre: "Privacinta", desc: "Rollos de cinta de privacidad de alta densidad en colores verde, gris y azul." },
                 { nombre: "Alambre de Púas", desc: "Alambre espigado de alta resistencia, galvanizado en calibres comerciales." },
                 { nombre: "Accesorios de Sujeción", desc: "Abrazaderas, tensores, capuchones, soleras, grapas y alambre de amarre." },
                 { nombre: "Portones Metálicos", desc: "Portones corredizos y batientes residenciales o de control industrial a medida." },
@@ -87,7 +87,7 @@ export function Mayorista() {
                 <StaggerItem key={p.nombre}>
                   <div className="bg-secondary-hover border border-secondary-light/45 rounded-xl p-5 hover:bg-secondary-light/30 hover:border-primary/50 transition-all h-full">
                     <h3 className="font-bold text-white mb-2">{p.nombre}</h3>
-                    <p className="text-xs text-slate-350 leading-relaxed">{p.desc}</p>
+                    <p className="text-xs text-slate-300 leading-relaxed">{p.desc}</p>
                   </div>
                 </StaggerItem>
               ))}

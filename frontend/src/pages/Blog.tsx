@@ -12,7 +12,7 @@ export function Blog() {
         title="Blog de Cerramiento Perimetral"
         description="Consejos, guías y novedades sobre malla ciclón, cerramientos perimetrales y seguridad en Guatemala."
       />
-      <div className="bg-secondary text-white py-20 mt-[104px] relative overflow-hidden">
+      <div className="bg-secondary text-white pt-32 pb-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh-pattern opacity-5 mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl font-black mb-4 !text-white">Blog Perimetral</h1>

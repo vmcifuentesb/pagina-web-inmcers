@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
           <span className="hidden md:inline text-slate-300">| Cobertura en toda Guatemala | 30 Años Fabricando Calidad</span>
         </div>
         <div className="hidden md:flex items-center space-x-3">
-          <span className="text-slate-350 text-xs font-normal">¿Necesitas cuantificar materiales?</span>
+          <span className="text-slate-300 text-xs font-normal">¿Necesitas cuantificar materiales?</span>
           <Link
             to="/cotizar"
             className="bg-primary hover:bg-primary-hover text-white font-bold px-3 py-1 rounded transition text-xs flex items-center cursor-pointer shadow-md"
@@ -57,8 +57,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-secondary py-2 shadow-premium border-b border-secondary-light/30'
-            : 'bg-secondary py-4 border-b border-secondary-light/30'
+            ? 'bg-secondary py-2 shadow-premium border-b border-[#152b47]/30'
+            : 'bg-secondary py-4 border-b border-[#152b47]/30'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -81,7 +81,7 @@ export const Contacto: React.FC = () => {
     let pTypeLabel = '';
     switch(projectType) {
       case 'suministro': pTypeLabel = 'Suministro de Materiales'; break;
-      case 'instalacion': pTypeLabel = 'Instalación Llave en Mano'; break;
+      case 'instalacion': pTypeLabel = 'Instalación (Con mano de obra)'; break;
       case 'herreria': pTypeLabel = 'Herrería / Estructuras'; break;
       case 'mayorista': pTypeLabel = 'Distribuidor Mayorista'; break;
       default: pTypeLabel = 'Consulta General';
@@ -111,7 +111,7 @@ export const Contacto: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="pt-24 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
+    <div ref={containerRef} className="bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-[0.01] z-0"></div>
       <Helmet>
         <title>Contacto y Cotizaciones — Inmcers S.A</title>
@@ -121,12 +121,12 @@ export const Contacto: React.FC = () => {
         />
       </Helmet>
       {/* Encabezado (Dark Theme for high visual identity) */}
-      <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 overflow-hidden text-center z-10">
+      <section className="relative bg-secondary pt-36 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#152b47]/30 overflow-hidden text-center z-10">
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-radial-glow rounded-full blur-3xl opacity-50"></div>
         <div className="absolute bottom-0 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-radial-glow-accent rounded-full blur-3xl opacity-40"></div>
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest">Atención Inmediata</span>
+          <span className="text-xs font-bold text-primary-light uppercase tracking-widest block font-black">Atención Inmediata</span>
           <h1 
             ref={titleRef}
             className="text-4xl font-title font-extrabold !text-white tracking-tight sm:text-5xl"
@@ -135,7 +135,7 @@ export const Contacto: React.FC = () => {
           </h1>
           <p 
             ref={subtitleRef}
-            className="text-lg text-slate-350 font-body max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed"
           >
             Estamos listos para asesorarle en su proyecto de seguridad perimetral. Escríbanos o comuníquese directamente.
           </p>
@@ -185,7 +185,11 @@ export const Contacto: React.FC = () => {
                 {/* WhatsApps */}
                 <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 mr-4 border border-primary/20">
-                    <i className="fa-brands fa-whatsapp text-xl text-primary"></i>
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.004 2c-5.522 0-10 4.478-10 10 0 1.77.46 3.48 1.34 5.01L2 22l5.13-1.34a9.922 9.922 0 0 0 4.87 1.28c5.523 0 10-4.478 10-10 0-5.522-4.477-10-10-10z" fill="#25D366" />
+                      <path d="M12.004 3.125c-4.9 0-8.875 3.975-8.875 8.875 0 1.57.41 3.09 1.19 4.45L3.75 19.95l3.58-.94a8.818 8.818 0 0 0 4.67 1.31c4.9 0 8.875-3.975 8.875-8.875S16.904 3.125 12.004 3.125z" fill="white" />
+                      <path d="M15.82 13.9c-.2-.1-1.2-.6-1.39-.67-.19-.07-.33-.1-.47.11-.14.21-.55.7-.68.84-.12.14-.25.16-.45.06-.2-.1-.85-.31-1.62-1a6.01 6.01 0 0 1-1.12-1.39c-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.14.03-.26-.02-.36s-.47-1.13-.64-1.54c-.17-.4-.36-.34-.49-.35h-.42c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.77 2.08.88 2.23c.11.15 1.52 2.32 3.68 3.25.52.22.92.36 1.24.46.52.16.99.14 1.36.08.41-.06 1.2-.49 1.37-.96.17-.47.17-.87.12-.96c-.05-.08-.19-.13-.39-.23z" fill="#25D366" />
+                    </svg>
                   </div>
                   <div>
                     <h3 className="font-title font-bold text-sm text-slate-900">Líneas de WhatsApp</h3>
@@ -265,7 +269,7 @@ export const Contacto: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className={`w-full px-4 py-3 rounded-xl border font-body text-sm bg-slate-50 text-slate-900 focus:outline-none focus:border-primary ${
-                      errors.name ? 'border-red-500' : 'border-slate-250'
+                      errors.name ? 'border-red-500' : 'border-slate-300'
                     }`}
                     placeholder="Juan Pérez"
                   />
@@ -284,7 +288,7 @@ export const Contacto: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className={`w-full px-4 py-3 rounded-xl border font-body text-sm bg-slate-50 text-slate-900 focus:outline-none focus:border-primary ${
-                        errors.phone ? 'border-red-500' : 'border-slate-250'
+                        errors.phone ? 'border-red-500' : 'border-slate-300'
                       }`}
                       placeholder="Ej. 4212-0707"
                     />
@@ -301,7 +305,7 @@ export const Contacto: React.FC = () => {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-250 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
                       placeholder="juan@correo.com"
                     />
                   </div>
@@ -316,9 +320,9 @@ export const Contacto: React.FC = () => {
                     id="projectType"
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-250 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
                   >
-                    <option value="instalacion">Instalación Llave en Mano (Con mano de obra)</option>
+                    <option value="instalacion">Instalación (Con mano de obra)</option>
                     <option value="suministro">Suministro Directo (Solo materiales)</option>
                     <option value="herreria">Herrería Estructural / Techados / Portones</option>
                     <option value="mayorista">Distribuidor Mayorista (Ferreterías / Constructoras)</option>
@@ -340,7 +344,7 @@ export const Contacto: React.FC = () => {
                           value={company}
                           onChange={(e) => setCompany(e.target.value)}
                           className={`w-full pl-10 pr-4 py-3 rounded-xl border bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary ${
-                            errors.company ? 'border-red-500' : 'border-slate-250'
+                            errors.company ? 'border-red-500' : 'border-slate-300'
                           }`}
                           placeholder="Ferretería La Bendición"
                         />
@@ -359,7 +363,7 @@ export const Contacto: React.FC = () => {
                           type="text"
                           value={nit}
                           onChange={(e) => setNit(e.target.value)}
-                          className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-250 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
+                          className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
                           placeholder="Ej: 123456-7"
                         />
                       </div>
@@ -375,7 +379,7 @@ export const Contacto: React.FC = () => {
                       type="text"
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-250 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 font-body text-sm focus:outline-none focus:border-primary"
                       placeholder="Empresa o Nombre del Proyecto"
                     />
                   </div>
@@ -392,7 +396,7 @@ export const Contacto: React.FC = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className={`w-full px-4 py-3 rounded-xl border font-body text-sm bg-slate-50 text-slate-900 focus:outline-none focus:border-primary ${
-                      errors.message ? 'border-red-500' : 'border-slate-250'
+                      errors.message ? 'border-red-500' : 'border-slate-300'
                     }`}
                     placeholder={
                       projectType === 'mayorista'
@@ -423,12 +427,16 @@ export const Contacto: React.FC = () => {
                     }}
                     target={name && phone && message ? "_blank" : undefined}
                     rel="noopener noreferrer"
-                    className={`flex-1 inline-flex items-center justify-center px-6 py-4 rounded-xl bg-accent text-white font-body font-bold text-sm transition-all duration-300 shadow-md ${
-                      name && phone && message ? 'hover:bg-accent-hover cursor-pointer' : 'opacity-60 cursor-not-allowed'
+                    className={`flex-1 inline-flex items-center justify-center px-6 py-4 rounded-xl text-white font-body font-bold text-sm transition-all duration-300 shadow-md ${
+                      name && phone && message ? 'bg-[#25D366] hover:bg-[#20ba5a] cursor-pointer' : 'bg-slate-400 opacity-60 cursor-not-allowed'
                     }`}
                     title="Llene Nombre, Teléfono y Mensaje primero para habilitar el envío directo"
                   >
-                    <i className="fa-brands fa-whatsapp text-base mr-2 text-green-400"></i>
+                    <svg className="w-5 h-5 mr-2 inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.004 2c-5.522 0-10 4.478-10 10 0 1.77.46 3.48 1.34 5.01L2 22l5.13-1.34a9.922 9.922 0 0 0 4.87 1.28c5.523 0 10-4.478 10-10 0-5.522-4.477-10-10-10z" fill="white" />
+                      <path d="M12.004 3.125c-4.9 0-8.875 3.975-8.875 8.875 0 1.57.41 3.09 1.19 4.45L3.75 19.95l3.58-.94a8.818 8.818 0 0 0 4.67 1.31c4.9 0 8.875-3.975 8.875-8.875S16.904 3.125 12.004 3.125z" fill="#25D366" />
+                      <path d="M15.82 13.9c-.2-.1-1.2-.6-1.39-.67-.19-.07-.33-.1-.47.11-.14.21-.55.7-.68.84-.12.14-.25.16-.45.06-.2-.1-.85-.31-1.62-1a6.01 6.01 0 0 1-1.12-1.39c-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.14.03-.26-.02-.36s-.47-1.13-.64-1.54c-.17-.4-.36-.34-.49-.35h-.42c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.77 2.08.88 2.23c.11.15 1.52 2.32 3.68 3.25.52.22.92.36 1.24.46.52.16.99.14 1.36.08.41-.06 1.2-.49 1.37-.96.17-.47.17-.87.12-.96c-.05-.08-.19-.13-.39-.23z" fill="white" />
+                    </svg>
                     Enviar a WhatsApp
                   </a>
                 </div>
@@ -442,7 +450,7 @@ export const Contacto: React.FC = () => {
                 <div className="space-y-2">
                   <h3 className="font-title font-extrabold text-2xl text-slate-900">¡Mensaje Enviado con Éxito!</h3>
                   <p className="font-body text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                    Hemos recibido su solicitud. Uno de nuestros asesores técnicos de **Inmcers S.A** se comunicará con usted de inmediato.
+                    Hemos recibido su solicitud. Uno de nuestros asesores técnicos de <strong>Inmcers S.A</strong> se comunicará con usted de inmediato.
                   </p>
                 </div>
                 <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3">
@@ -450,9 +458,13 @@ export const Contacto: React.FC = () => {
                     href={getWhatsAppLink()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-accent hover:bg-accent-hover text-white font-body font-bold text-sm shadow-md cursor-pointer"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-body font-bold text-sm shadow-md cursor-pointer"
                   >
-                    <i className="fa-brands fa-whatsapp text-base mr-2"></i>
+                    <svg className="w-4 h-4 fill-current text-white mr-2 inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.004 2c-5.522 0-10 4.478-10 10 0 1.77.46 3.48 1.34 5.01L2 22l5.13-1.34a9.922 9.922 0 0 0 4.87 1.28c5.523 0 10-4.478 10-10 0-5.522-4.477-10-10-10z" fill="white" />
+                      <path d="M12.004 3.125c-4.9 0-8.875 3.975-8.875 8.875 0 1.57.41 3.09 1.19 4.45L3.75 19.95l3.58-.94a8.818 8.818 0 0 0 4.67 1.31c4.9 0 8.875-3.975 8.875-8.875S16.904 3.125 12.004 3.125z" fill="#25D366" />
+                      <path d="M15.82 13.9c-.2-.1-1.2-.6-1.39-.67-.19-.07-.33-.1-.47.11-.14.21-.55.7-.68.84-.12.14-.25.16-.45.06-.2-.1-.85-.31-1.62-1a6.01 6.01 0 0 1-1.12-1.39c-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.14.03-.26-.02-.36s-.47-1.13-.64-1.54c-.17-.4-.36-.34-.49-.35h-.42c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.77 2.08.88 2.23c.11.15 1.52 2.32 3.68 3.25.52.22.92.36 1.24.46.52.16.99.14 1.36.08.41-.06 1.2-.49 1.37-.96.17-.47.17-.87.12-.96c-.05-.08-.19-.13-.39-.23z" fill="white" />
+                    </svg>
                     Enviar copia por WhatsApp
                   </a>
                   <button

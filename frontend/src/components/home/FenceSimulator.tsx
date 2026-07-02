@@ -9,8 +9,6 @@ export const FenceSimulator: React.FC = () => {
 
   const getMeshColor = () => {
     if (coat === 'green') return '#15803d'; 
-    if (coat === 'blue') return '#1d4ed8'; 
-    if (coat === 'gray') return '#4b5563'; 
     return '#94a3b8'; 
   };
 
@@ -24,7 +22,7 @@ export const FenceSimulator: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Dynamic Visual SVG Canvas */}
-      <div className="relative w-full h-56 bg-slate-200 rounded-2xl border border-slate-350 flex items-center justify-center overflow-hidden shadow-inner">
+      <div className="relative w-full h-56 bg-slate-200 rounded-2xl border border-slate-300 flex items-center justify-center overflow-hidden shadow-inner">
         <svg className="w-full h-full max-w-[480px]" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="500" height="150" fill="transparent" />
           <rect y="150" width="500" height="50" fill="#cbd5e1" />
@@ -113,24 +111,22 @@ export const FenceSimulator: React.FC = () => {
         
         {/* Mesh coating selection */}
         <div className="space-y-2">
-          <label className="block font-extrabold text-slate-700 flex items-center gap-1.5">
-            <Palette className="w-4 h-4 text-primary" />
+          <label className="block font-extrabold text-slate-200 flex items-center gap-1.5">
+            <Palette className="w-4 h-4 text-primary-light" />
             <span>Acabado de Malla Ciclón:</span>
           </label>
           <div className="flex flex-wrap gap-2">
             {[
-              { id: 'galvanized', label: 'Galvanizado HG', color: 'bg-slate-350 border-slate-400' },
-              { id: 'green', label: 'PVC Verde', color: 'bg-green-600 text-white' },
-              { id: 'blue', label: 'PVC Azul', color: 'bg-blue-600 text-white' },
-              { id: 'gray', label: 'PVC Gris', color: 'bg-gray-500 text-white' }
+              { id: 'galvanized', label: 'Galvanizado HG', color: 'bg-slate-300 border-slate-400' },
+              { id: 'green', label: 'PVC Verde', color: 'bg-green-600 text-white' }
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => setCoat(item.id)}
                 className={`px-3 py-2 rounded-xl font-bold border-2 transition-all duration-200 cursor-pointer ${
                   coat === item.id 
-                    ? 'border-primary bg-primary/10 text-primary font-black scale-102 shadow-sm' 
-                    : 'border-slate-200 bg-white text-slate-600'
+                    ? 'border-primary-light bg-primary/20 text-primary-light font-black scale-102 shadow-sm' 
+                    : 'border-secondary-light/60 bg-secondary/50 text-slate-200 hover:border-primary/50 hover:bg-secondary-hover/50'
                 }`}
               >
                 <span className="flex items-center space-x-1.5">
@@ -144,35 +140,35 @@ export const FenceSimulator: React.FC = () => {
 
         {/* Razor Ribbon toggle */}
         <div className="space-y-2">
-          <label className="block font-extrabold text-slate-700 flex items-center gap-1.5">
-            <Shield className="w-4 h-4 text-primary" />
+          <label className="block font-extrabold text-slate-200 flex items-center gap-1.5">
+            <Shield className="w-4 h-4 text-primary-light" />
             <span>Seguridad Superior:</span>
           </label>
           <button
             onClick={() => setHasRazor(!hasRazor)}
             className={`w-full p-2.5 rounded-xl font-bold border-2 text-center transition-all duration-250 cursor-pointer flex items-center justify-center gap-2 ${
               hasRazor 
-                ? 'bg-red-500/10 border-red-500 text-red-600 font-extrabold shadow-sm' 
-                : 'border-slate-200 bg-white text-slate-600'
+                ? 'bg-red-500/20 border-red-500 text-red-400 font-extrabold shadow-sm' 
+                : 'border-secondary-light/60 bg-secondary/50 text-slate-200 hover:border-primary/50 hover:bg-secondary-hover/50'
             }`}
           >
-            <ShieldAlert className={`w-4 h-4 ${hasRazor ? 'text-red-500 animate-pulse' : 'text-slate-400'}`} />
+            <ShieldAlert className={`w-4 h-4 ${hasRazor ? 'text-red-400 animate-pulse' : 'text-slate-400'}`} />
             {hasRazor ? 'Quitar Concertina Razor' : 'Agregar Concertina Razor'}
           </button>
         </div>
 
         {/* Privacinta Slats controls */}
-        <div className="col-span-1 sm:col-span-2 space-y-3 pt-4 border-t border-slate-200/50">
+        <div className="col-span-1 sm:col-span-2 space-y-3 pt-4 border-t border-secondary-light/35">
           <div className="flex items-center justify-between">
             <label className="flex items-center space-x-2.5 cursor-pointer select-none">
               <input 
                 type="checkbox" 
                 checked={hasSlats}
                 onChange={(e) => setHasSlats(e.target.checked)}
-                className="h-4.5 w-4.5 text-primary border-slate-350 focus:ring-primary rounded cursor-pointer"
+                className="h-4.5 w-4.5 text-primary border-secondary-light focus:ring-primary rounded cursor-pointer"
               />
-              <span className="font-extrabold text-slate-700 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-primary" />
+              <span className="font-extrabold text-slate-200 flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-primary-light" />
                 <span>Insertar Privacinta Decorativa (95% Privacidad)</span>
               </span>
             </label>
@@ -180,15 +176,15 @@ export const FenceSimulator: React.FC = () => {
           
           {hasSlats && (
             <div className="flex items-center space-x-2.5 pl-7 animate-fade-in">
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Color de Cinta:</span>
-              {['Verde', 'Gris', 'Azul', 'Negro'].map((color) => (
+              <span className="text-[11px] font-bold text-slate-450 uppercase tracking-wider">Color de Cinta:</span>
+              {['Verde', 'Gris', 'Azul'].map((color) => (
                 <button
                   key={color}
                   onClick={() => setSlatColor(color)}
                   className={`px-3 py-1.5 rounded-xl font-bold border-2 text-xs transition-all duration-150 cursor-pointer ${
                     slatColor === color 
                       ? 'bg-primary border-primary text-white font-black shadow-md' 
-                      : 'border-slate-200 bg-white text-slate-650'
+                      : 'border-secondary-light/60 bg-secondary/50 text-slate-350 hover:border-primary/55'
                   }`}
                 >
                   {color}

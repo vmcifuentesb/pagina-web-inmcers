@@ -9,8 +9,8 @@
   --color-secondary: #05111F;        /* Deep blue base background (Projects blue) */
   --color-secondary-hover: #0b1a2d;  /* Darker blue for cards */
   --color-secondary-light: #152b47;  /* Steel blue for borders */
-  --color-accent: #6E3C1F;           /* Marrón tierra (Acento cálido/cobre del manual) */
-  --color-accent-hover: #542d17;     /* Marrón tierra oscuro */
+  --color-accent: #E65F1E;           /* Naranja Cobre Vibrante (Acento visible del manual) */
+  --color-accent-hover: #C44D14;     /* Naranja Cobre Oscurecido */
   --color-bgLight: #f4f6f8;          /* Light base background */
   
   --font-title: 'DM Sans', sans-serif;

@@ -24,7 +24,7 @@ export const FAQAccordion: React.FC = () => {
             <span className="font-extrabold text-sm sm:text-base text-slate-800">{item.pregunta}</span>
             <ChevronDown
               size={18}
-              className={`shrink-0 text-slate-450 transition-transform duration-300 ${
+              className={`shrink-0 text-slate-500 transition-transform duration-300 ${
                 openIndex === idx ? 'rotate-180 text-primary' : ''
               }`}
             />
@@ -34,7 +34,7 @@ export const FAQAccordion: React.FC = () => {
               openIndex === idx ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
             }`}
           >
-            <p className="px-5 pb-5 text-xs sm:text-sm text-slate-650 leading-relaxed border-t border-slate-100 pt-3">
+            <p className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               {item.respuesta}
             </p>
           </div>

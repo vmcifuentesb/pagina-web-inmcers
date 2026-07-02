@@ -68,8 +68,8 @@ export const BeforeAfterSlider: React.FC = () => {
         className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize flex items-center justify-center z-30"
         style={{ left: `${sliderPos}%` }}
       >
-        <div className="h-10 w-10 rounded-full bg-accent text-secondary shadow-xl border-2 border-white flex items-center justify-center font-black hover:scale-110 active:scale-95 transition-transform duration-150">
-          <i className="fa-solid fa-arrows-left-right text-sm"></i>
+        <div className="h-10 w-10 rounded-full bg-primary text-white shadow-xl border-2 border-white flex items-center justify-center font-black hover:scale-110 active:scale-95 transition-transform duration-150">
+          <i className="fa-solid fa-arrows-left-right text-xs"></i>
         </div>
       </div>
 

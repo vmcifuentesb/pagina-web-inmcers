@@ -90,10 +90,14 @@ function App() {
             href="https://wa.me/50242120707?text=Hola%20Inmcers%20S.A,%20me%20gustaría%20solicitar%20asesoría%20sobre%20mallas%20y%20cerramientos%20perimetrales."
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-premium flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer"
+            className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 rounded-full shadow-premium flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer"
             aria-label="Contactar por WhatsApp"
           >
-            <i className="fa-brands fa-whatsapp text-2xl"></i>
+            <svg className="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.004 2c-5.522 0-10 4.478-10 10 0 1.77.46 3.48 1.34 5.01L2 22l5.13-1.34a9.922 9.922 0 0 0 4.87 1.28c5.523 0 10-4.478 10-10 0-5.522-4.477-10-10-10z" fill="white" />
+              <path d="M12.004 3.125c-4.9 0-8.875 3.975-8.875 8.875 0 1.57.41 3.09 1.19 4.45L3.75 19.95l3.58-.94a8.818 8.818 0 0 0 4.67 1.31c4.9 0 8.875-3.975 8.875-8.875S16.904 3.125 12.004 3.125z" fill="#25D366" />
+              <path d="M15.82 13.9c-.2-.1-1.2-.6-1.39-.67-.19-.07-.33-.1-.47.11-.14.21-.55.7-.68.84-.12.14-.25.16-.45.06-.2-.1-.85-.31-1.62-1a6.01 6.01 0 0 1-1.12-1.39c-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.14.03-.26-.02-.36s-.47-1.13-.64-1.54c-.17-.4-.36-.34-.49-.35h-.42c-.14 0-.38.05-.58.27-.2.22-.76.74-.76 1.8s.77 2.08.88 2.23c.11.15 1.52 2.32 3.68 3.25.52.22.92.36 1.24.46.52.16.99.14 1.36.08.41-.06 1.2-.49 1.37-.96.17-.47.17-.87.12-.96c-.05-.08-.19-.13-.39-.23z" fill="white" />
+            </svg>
             <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 font-body font-bold text-xs uppercase tracking-wider transition-all duration-300 ease-in-out whitespace-nowrap">
               WhatsApp Ventas
             </span>

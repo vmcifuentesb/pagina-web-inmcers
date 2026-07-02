@@ -48,7 +48,7 @@ export const Productos: React.FC = () => {
   ];
 
   return (
-    <div className="pt-24 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
+    <div className="bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-[0.01] z-0"></div>
       <Helmet>
         <title>Catálogo de Mallas y Cerramientos — Inmcers S.A</title>
@@ -59,17 +59,17 @@ export const Productos: React.FC = () => {
       </Helmet>
       
       {/* Encabezado (Dark Style for premium visual impact) */}
-      <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 text-center overflow-hidden">
+      <section className="relative bg-secondary pt-36 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#152b47]/30 text-center overflow-hidden">
         {/* Glows de fondo */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-radial-glow rounded-full blur-3xl opacity-60"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-radial-glow-accent rounded-full blur-3xl opacity-40"></div>
         
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest">Catálogo Técnico Oficial</span>
+          <span className="text-xs font-bold text-primary-light uppercase tracking-widest block font-black">Catálogo Técnico Oficial</span>
           <h1 className="text-4xl font-title font-extrabold !text-white tracking-tight sm:text-5xl">
             Catálogo de Mallas y Cerramientos de Fábrica
           </h1>
-          <p className="text-lg text-slate-350 font-body max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed">
             Fabricación propia de malla ciclón galvanizada y PVC. Distribuidor de reja 3D, razor ribbon, alambres y postes al por mayor en Guatemala con más de 30 años de trayectoria.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const Productos: React.FC = () => {
               placeholder="Buscar producto o medida..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-250 font-body text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all bg-slate-50 placeholder-slate-400"
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 font-body text-sm text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all bg-slate-50 placeholder-slate-400"
             />
           </div>
 
@@ -247,7 +247,7 @@ export const Productos: React.FC = () => {
 
           <div className="mt-16 text-center max-w-xl mx-auto space-y-6">
             <h3 className="text-xl font-bold text-slate-900">¿Deseas solicitar una lista de precios mayorista?</h3>
-            <p className="text-xs text-slate-650 leading-relaxed">
+            <p className="text-xs text-slate-600 leading-relaxed">
               Ponte en contacto con nuestro departamento de proyectos y ventas corporativas para recibir tu cotización de distribuidor o abrir una cuenta con nosotros.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -259,7 +259,7 @@ export const Productos: React.FC = () => {
               </Link>
               <Link 
                 to="/contacto" 
-                className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-350 font-bold py-3 px-6 rounded-xl transition duration-200 text-xs flex items-center justify-center cursor-pointer"
+                className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold py-3 px-6 rounded-xl transition duration-200 text-xs flex items-center justify-center cursor-pointer"
               >
                 Solicitar Cotización de Distribuidor
               </Link>

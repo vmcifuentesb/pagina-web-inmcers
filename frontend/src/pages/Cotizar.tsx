@@ -39,7 +39,7 @@ export const Cotizar: React.FC = () => {
   // Calculator State
   const [calcPerimetro, setCalcPerimetro] = useState("");
   const [calcAltura, setCalcAltura] = useState("2");
-  const [calcResultado, setCalcResultado] = useState<{ malla: number; postes: number; tuberia: number; precio: number } | null>(null);
+  const [calcResultado, setCalcResultado] = useState<{ malla: number; postes: number; tuberia: number } | null>(null);
 
   const handleNext = () => {
     if (step === 1) {
@@ -94,10 +94,8 @@ export const Cotizar: React.FC = () => {
     const area = p * a;
     const postes = Math.ceil(p / 2.5);
     const tuberia = Math.ceil(p * 1.05);
-    // Costo aproximado en Quetzales de referencia
-    const precio = Math.round(area * 85 + postes * 120 + tuberia * 45);
 
-    setCalcResultado({ malla: Math.round(area), postes, tuberia, precio });
+    setCalcResultado({ malla: Math.round(area), postes, tuberia });
   };
 
   const transferirMedidasACotizar = () => {
@@ -113,13 +111,13 @@ export const Cotizar: React.FC = () => {
   };
 
   return (
-    <div className="pt-24 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden bg-noise">
+    <div className="pt-32 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden bg-noise">
       <Helmet>
         <title>Cotizar y Estimar Materiales — Inmcers S.A</title>
         <meta name="description" content="Use nuestra calculadora técnica de materiales y solicite una cotización formal para su cerramiento perimetral con Inmcers S.A en Guatemala." />
       </Helmet>
 
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10 relative">
         {/* Header */}
         <div className="text-center mb-10">
           <span className="text-xs font-bold text-primary uppercase tracking-widest">Herramientas del Cliente</span>
@@ -138,7 +136,7 @@ export const Cotizar: React.FC = () => {
             className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-title font-bold text-xs sm:text-sm transition-all duration-300 cursor-pointer ${
               activeTab === 'calculator'
                 ? 'bg-primary text-white shadow-md'
-                : 'text-slate-650 hover:text-slate-900 hover:bg-slate-300/40'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-300/40'
             }`}
           >
             <Calculator className="w-4 h-4 shrink-0" />
@@ -149,7 +147,7 @@ export const Cotizar: React.FC = () => {
             className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-title font-bold text-xs sm:text-sm transition-all duration-300 cursor-pointer ${
               activeTab === 'quote'
                 ? 'bg-primary text-white shadow-md'
-                : 'text-slate-650 hover:text-slate-900 hover:bg-slate-300/40'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-300/40'
             }`}
           >
             <Send className="w-4 h-4 shrink-0" />
@@ -175,7 +173,7 @@ export const Cotizar: React.FC = () => {
 
               <form onSubmit={handleCalcular} className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-650 uppercase tracking-wider">
+                  <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                     Perímetro Total (metros lineales) *
                   </label>
                   <div className="relative">
@@ -186,14 +184,14 @@ export const Cotizar: React.FC = () => {
                       min="1"
                       value={calcPerimetro}
                       onChange={(e) => setCalcPerimetro(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 focus:outline-none focus:border-primary text-sm font-semibold"
+                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 focus:outline-none focus:border-primary text-sm font-semibold"
                       placeholder="Ej: 120"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-slate-650 uppercase tracking-wider">
+                  <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider">
                     Altura de la Malla (metros)
                   </label>
                   <div className="relative">
@@ -201,7 +199,7 @@ export const Cotizar: React.FC = () => {
                     <select
                       value={calcAltura}
                       onChange={(e) => setCalcAltura(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 focus:outline-none focus:border-primary text-sm font-semibold cursor-pointer"
+                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 focus:outline-none focus:border-primary text-sm font-semibold cursor-pointer"
                     >
                       <option value="1.00">1.00 metro</option>
                       <option value="1.50">1.50 metros (Estándar)</option>
@@ -226,7 +224,7 @@ export const Cotizar: React.FC = () => {
                 <div className="mt-8 bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-inner animate-in fade-in duration-300">
                   <h3 className="text-base font-bold mb-4 text-center text-slate-900 tracking-wide uppercase">Estimación de Materiales para {calcPerimetro}m</h3>
                   
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
                       <p className="text-xl sm:text-2xl font-black text-primary">{calcResultado.malla}</p>
                       <p className="text-[9px] uppercase font-bold text-slate-500 mt-1">m² de malla</p>
@@ -239,14 +237,10 @@ export const Cotizar: React.FC = () => {
                       <p className="text-xl sm:text-2xl font-black text-primary">{calcResultado.tuberia}</p>
                       <p className="text-[9px] uppercase font-bold text-slate-500 mt-1">ml de tubería</p>
                     </div>
-                    <div className="text-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-                      <p className="text-xl sm:text-2xl font-black text-green-650">Q{calcResultado.precio.toLocaleString()}</p>
-                      <p className="text-[9px] uppercase font-bold text-slate-500 mt-1">Costo Estimado *</p>
-                    </div>
                   </div>
 
-                  <p className="text-[10px] text-slate-500 text-center font-medium leading-normal">
-                    * Costo estimado de referencia (material básico). No incluye accesorios de tensión, razor ribbon superior ni mano de obra de instalación.
+                  <p className="text-[10px] text-slate-500 text-center font-semibold leading-normal bg-primary/5 p-3.5 rounded-xl border border-primary/20 max-w-xl mx-auto">
+                    * Estimación física de materiales básicos para referencia. No incluye accesorios de tensión (abrazaderas, copas), razor ribbon superior ni servicios de instalación. Solicite su cotización formal para obtener precios oficiales de fábrica personalizados.
                   </p>
 
                   <div className="text-center pt-6 border-t border-slate-200 mt-6">
@@ -313,7 +307,7 @@ export const Cotizar: React.FC = () => {
                         min="1"
                         value={formData.meters}
                         onChange={(e) => setFormData({...formData, meters: e.target.value})}
-                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.meters ? 'border-red-500' : 'border-slate-250'}`}
+                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.meters ? 'border-red-500' : 'border-slate-300'}`}
                         placeholder="Ej. 150"
                       />
                       {errors.meters && <span className="text-red-500 text-[10px] font-bold">{errors.meters}</span>}
@@ -326,7 +320,7 @@ export const Cotizar: React.FC = () => {
                       <select
                         value={formData.height}
                         onChange={(e) => setFormData({...formData, height: e.target.value})}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
                       >
                         <option value="1.00">1.00 metro</option>
                         <option value="1.50">1.50 metros (Estándar)</option>
@@ -343,7 +337,7 @@ export const Cotizar: React.FC = () => {
                       <select
                         value={formData.material}
                         onChange={(e) => setFormData({...formData, material: e.target.value})}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary cursor-pointer"
                       >
                         <option value="malla_ciclon">Malla Ciclón Galvanizada (HG)</option>
                         <option value="malla_pvc">Malla Ciclón PVC Verde</option>
@@ -358,7 +352,7 @@ export const Cotizar: React.FC = () => {
                         ¿Requiere Mano de Obra de Instalación?
                       </label>
                       <div className="flex gap-4 mt-1">
-                        <label className="flex-1 flex items-center justify-center gap-2 p-3 border rounded-lg cursor-pointer transition-all bg-slate-50 border-slate-250 hover:bg-slate-100 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+                        <label className="flex-1 flex items-center justify-center gap-2 p-3 border rounded-lg cursor-pointer transition-all bg-slate-50 border-slate-300 hover:bg-slate-100 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
                           <input 
                             type="radio" 
                             name="installation" 
@@ -369,7 +363,7 @@ export const Cotizar: React.FC = () => {
                           <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
                           <span className="text-xs font-bold text-slate-950">Sí, con instalación</span>
                         </label>
-                        <label className="flex-1 flex items-center justify-center gap-2 p-3 border rounded-lg cursor-pointer transition-all bg-slate-50 border-slate-250 hover:bg-slate-100 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
+                        <label className="flex-1 flex items-center justify-center gap-2 p-3 border rounded-lg cursor-pointer transition-all bg-slate-50 border-slate-300 hover:bg-slate-100 has-[:checked]:border-primary has-[:checked]:bg-primary/10">
                           <input 
                             type="radio" 
                             name="installation" 
@@ -416,7 +410,7 @@ export const Cotizar: React.FC = () => {
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.name ? 'border-red-500' : 'border-slate-250'}`}
+                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.name ? 'border-red-500' : 'border-slate-300'}`}
                         placeholder="Juan Pérez"
                       />
                       {errors.name && <span className="text-red-500 text-[10px] font-bold">{errors.name}</span>}
@@ -432,7 +426,7 @@ export const Cotizar: React.FC = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                          className={`w-full pl-10 pr-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.phone ? 'border-red-500' : 'border-slate-250'}`}
+                          className={`w-full pl-10 pr-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.phone ? 'border-red-500' : 'border-slate-300'}`}
                           placeholder="4212 0707"
                         />
                       </div>
@@ -449,7 +443,7 @@ export const Cotizar: React.FC = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary"
+                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary"
                           placeholder="ventas@empresa.com"
                         />
                       </div>
@@ -463,7 +457,7 @@ export const Cotizar: React.FC = () => {
                         type="text"
                         value={formData.company}
                         onChange={(e) => setFormData({...formData, company: e.target.value})}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-250 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary"
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary"
                         placeholder="Ej. Constructoras, S.A."
                       />
                     </div>
@@ -476,7 +470,7 @@ export const Cotizar: React.FC = () => {
                         type="text"
                         value={formData.location}
                         onChange={(e) => setFormData({...formData, location: e.target.value})}
-                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.location ? 'border-red-500' : 'border-slate-250'}`}
+                        className={`w-full px-4 py-3 rounded-lg border bg-slate-50 text-slate-950 font-body text-sm focus:outline-none focus:border-primary ${errors.location ? 'border-red-500' : 'border-slate-300'}`}
                         placeholder="Ej. Quetzaltenango / Zona 10 Capital"
                       />
                       {errors.location && <span className="text-red-500 text-[10px] font-bold">{errors.location}</span>}
@@ -521,7 +515,7 @@ export const Cotizar: React.FC = () => {
                     ¡Solicitud Registrada Exitosamente!
                   </h2>
                   <p className="font-body text-slate-600 max-w-md mx-auto mb-8 text-xs sm:text-sm">
-                    Hemos registrado las dimensiones de su perímetro de **{formData.meters} metros lineales**. Un asesor comercial de **Inmcers S.A** le contactará de inmediato con la propuesta formal.
+                    Hemos registrado las dimensiones de su perímetro de <strong>{formData.meters} metros lineales</strong>. Un asesor comercial de <strong>Inmcers S.A</strong> le contactará de inmediato con la propuesta formal.
                   </p>
                   
                   <div className="bg-slate-50 p-6 rounded-xl mb-8 max-w-sm mx-auto text-left border border-slate-200">
@@ -529,7 +523,7 @@ export const Cotizar: React.FC = () => {
                     <ul className="space-y-2.5 text-xs font-body text-slate-700">
                       <li><span className="font-semibold text-slate-500">Metraje Lineal:</span> {formData.meters}m</li>
                       <li><span className="font-semibold text-slate-500">Altura:</span> {formData.height}m</li>
-                      <li><span className="font-semibold text-slate-500">Mano de obra:</span> {formData.installation === 'si' ? 'Sí (Llave en mano)' : 'No (Solo Suministro)'}</li>
+                      <li><span className="font-semibold text-slate-500">Mano de obra:</span> {formData.installation === 'si' ? 'Sí (Con mano de obra)' : 'No (Solo Suministro)'}</li>
                       <li><span className="font-semibold text-slate-500">Ubicación física:</span> {formData.location}</li>
                     </ul>
                   </div>

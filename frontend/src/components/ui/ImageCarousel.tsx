@@ -83,7 +83,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images, autoPlayInterval = 400
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               currentIndex === index 
-                ? 'bg-accent w-8 shadow-[0_0_10px_rgba(243,112,33,0.8)]' 
+                ? 'bg-accent w-8 shadow-[0_0_10px_rgba(230,95,30,0.8)]' 
                 : 'bg-white/40 hover:bg-white/80'
             }`}
             aria-label={`Ir a la imagen ${index + 1}`}

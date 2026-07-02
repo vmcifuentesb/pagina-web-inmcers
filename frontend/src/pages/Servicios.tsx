@@ -46,20 +46,20 @@ export const Servicios: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="pt-20 bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
+    <div ref={containerRef} className="bg-slate-50 text-slate-800 min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-[0.01] z-0"></div>
       <SEOHead
         title="Instalación de Malla Perimetral y Cerramientos"
         description="Industria de mallas y cercas en Guatemala. Ofrecemos servicios profesionales de instalación de malla ciclón, razor ribbon, privacinta y herrería a medida."
       />
       {/* Encabezado (Dark Theme Hero for High Impact) */}
-      <section className="relative bg-secondary py-20 px-4 sm:px-6 lg:px-8 border-b border-secondary-light/30 text-center overflow-hidden">
+      <section className="relative bg-secondary pt-36 pb-28 px-4 sm:px-6 lg:px-8 border-b border-[#152b47]/30 text-center overflow-hidden">
         {/* Glows de fondo */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-radial-glow rounded-full blur-3xl opacity-60"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-radial-glow-accent rounded-full blur-3xl opacity-40"></div>
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <span className="text-xs font-bold text-primary uppercase tracking-widest">Servicios Profesionales</span>
+          <span className="text-xs font-bold text-primary-light uppercase tracking-widest block font-black">Servicios Profesionales</span>
           <h1 
             ref={titleRef}
             className="text-4xl font-title font-extrabold !text-white tracking-tight sm:text-5xl"
@@ -68,7 +68,7 @@ export const Servicios: React.FC = () => {
           </h1>
           <p 
             ref={subtitleRef}
-            className="text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-slate-300 font-body max-w-2xl mx-auto leading-relaxed"
           >
             Ofrecemos flexibilidad industrial y comercial adaptada a las especificaciones técnicas y al presupuesto de su proyecto de cerramiento en Guatemala.
           </p>
@@ -106,7 +106,7 @@ export const Servicios: React.FC = () => {
                     <h3 className="font-title font-extrabold text-xl text-slate-900 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="font-body text-xs text-slate-650 leading-relaxed">
+                    <p className="font-body text-xs text-slate-600 leading-relaxed">
                       {service.detailedDescription}
                     </p>
                   </div>
@@ -146,7 +146,7 @@ export const Servicios: React.FC = () => {
 
       {/* BANNER PREMIUM: LEVANTAMIENTO DE MEDIDAS GRATIS (Dark Container for high contrast call to action) */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-transparent max-w-7xl mx-auto">
-        <div ref={bannerRef} className={`measurement-banner bg-secondary text-white rounded-3xl p-8 sm:p-12 shadow-premium relative overflow-hidden border border-secondary-light/40 transition-all duration-700 ease-out transform ${
+        <div ref={bannerRef} className={`measurement-banner bg-secondary text-white rounded-3xl p-8 sm:p-12 shadow-premium relative overflow-hidden border border-[#152b47]/40 transition-all duration-700 ease-out transform ${
           bannerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           {/* Círculos de iluminación */}
